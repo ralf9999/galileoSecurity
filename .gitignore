@@ -34,7 +34,11 @@ wp-config.php
 
 # htaccess
 /.htaccess
-
+# node_modules
+node_modules
+# package
+package.json
+package-lock.json
 # All plugins
 #
 # Note: If you wish to whitelist plugins,

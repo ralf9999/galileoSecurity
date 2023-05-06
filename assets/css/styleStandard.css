@@ -1,0 +1,341 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  font-family: "Roboto";
+  font-size: 10px;
+  font-weight: 300;
+}
+
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+}
+
+h1 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 5.9rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+  font-weight: 300;
+  line-height: 5.4rem;
+}
+
+h3 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  line-height: 4.2rem;
+}
+
+h4 {
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 3.8rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 3rem;
+}
+
+h6, p, li, a, span, button, input, label {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.2rem;
+}
+
+p {
+  line-height: 2.2rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+.cl_subline {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  appearance: auto;
+  color: canvastext;
+  background-color: canvas;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-top-style: inset;
+  border-right-style: inset;
+  border-bottom-style: inset;
+  border-left-style: inset;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  border-image-source: none;
+  border-image-slice: 100%;
+  border-image-width: 0;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  user-select: text;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  cursor: auto;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline-offset: 0;
+  outline-color: green;
+}
+
+:focus-visible {
+  outline-style: auto;
+  outline-width: 0;
+  outline-color: red;
+}
+
+.cl_boxingArea {
+  position: relative;
+  width: min(1260px, 70%);
+  margin: 5rem auto 8rem auto;
+  padding: 0;
+}
+
+.cl_wrapper {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.cl_hover {
+  color: #bababa;
+}
+
+.cl_trennline {
+  margin: 5rem 0 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cl_trennline div {
+  margin: auto 0;
+  flex-grow: 3;
+  width: auto;
+}
+.cl_trennline div hr {
+  width: 100%;
+}
+.cl_trennline h2 {
+  text-align: center;
+  flex-grow: 0.1;
+  border-bottom-style: none;
+}
+
+/*Style schriften*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+  color: #666666;
+  display: block;
+  margin: 0 0 2rem 0;
+  border-bottom-style: dotted;
+}
+
+span {
+  padding: 0 1rem 0 0;
+  color: red;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+/*Color style*/
+.cl_colorBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cl_primaryColor {
+  width: 25rem;
+  height: 25rem;
+  background-color: #ad4c03;
+}
+
+.cl_secondColor {
+  width: 25rem;
+  height: 25rem;
+  background-color: #b3b3b3;
+}
+
+.cl_backgrundColor {
+  width: 25rem;
+  height: 25rem;
+  background-color: #000;
+}
+
+.cl_backgrundColor {
+  width: 25rem;
+  height: 25rem;
+  background-color: #000;
+}
+
+.cl_backgroundSecondColor {
+  width: 25rem;
+  height: 25rem;
+  background-color: #fff;
+}
+
+.cl_hoverPrimaryColor {
+  width: 25rem;
+  height: 25rem;
+  background-color: #ee8637;
+}
+
+.cl_hoverSecondColor {
+  width: 25rem;
+  height: 25rem;
+  background-color: #b3b3b3;
+}
+
+.cl_primaryColor,
+.cl_secondColor,
+.cl_backgrundColor,
+.cl_backgroundSecondColor,
+.cl_hoverPrimaryColor,
+.cl_hoverSecondColor {
+  box-shadow: 0px 4px 9.8px rgba(0, 0, 0, 0.072), 0px 4px 14.5px rgba(0, 0, 0, 0.087), 0px 4px 80px rgba(0, 0, 0, 0.11);
+}
+
+/* Button style */
+button {
+  margin-top: 0em;
+  margin-right: 0em;
+  margin-bottom: 0em;
+  margin-left: 0em;
+  border: none;
+  outline: 0;
+  background-color: transparent;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.cl_btnBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+}
+.cl_btnBox .cl_btnStyle {
+  cursor: pointer;
+  padding: 1.2rem 3rem;
+}
+.cl_btnBox .cl_btnEins {
+  transition: all 300ms ease-in-out;
+  background-color: transparent;
+  color: #ad4c03;
+  border: 1px solid #ad4c03;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+.cl_btnBox .cl_btnEins:hover,
+.cl_btnBox .cl_btnEins :focus {
+  background-color: #ad4c03;
+  color: #fff;
+  box-shadow: 0px 4px 9.8px rgba(0, 0, 0, 0.072), 0px 4px 14.5px rgba(0, 0, 0, 0.087), 0px 4px 80px rgba(0, 0, 0, 0.11);
+}
+.cl_btnBox .cl_btnZwei {
+  transition: all 300ms ease-in-out;
+  background-color: #b3b3b3;
+  color: #fff;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+.cl_btnBox .cl_btnZwei:hover,
+.cl_btnBox .cl_btnZwei :focus {
+  background-color: #ee8637;
+  color: #fff;
+  box-shadow: 0px 4px 9.8px rgba(0, 0, 0, 0.072), 0px 4px 14.5px rgba(0, 0, 0, 0.087), 0px 4px 80px rgba(0, 0, 0, 0.11);
+}
+.cl_btnBox .cl_btnDrei {
+  transition: all 300ms ease-in-out;
+  color: #ad4c03;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+.cl_btnBox .cl_btnDrei:hover,
+.cl_btnBox .cl_btnDrei :focus {
+  color: #ee8637;
+  transform: scale(1.1) translateY(-3px);
+  -webkit-transform: scale(1.1) translateY(-3px);
+  -moz-transform: scale(1.1) translateY(-3px);
+  -ms-transform: scale(1.1) translateY(-3px);
+  -o-transform: scale(1.1) translateY(-3px);
+}
+
+/*# sourceMappingURL=styleStandard.css.map */

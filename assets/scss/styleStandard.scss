@@ -1,0 +1,203 @@
+@forward 'color';
+@forward 'fonts';
+@forward 'standard';
+@use 'color' as clr;
+
+.cl_wrapper {
+    width: 100%;
+    padding: 0 2rem;
+}
+.cl_hover{
+    color: clr.$textcolorLightHover;
+}
+//trennline Style
+.cl_trennline {
+    margin: 5rem 0 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+        margin: auto 0;
+        flex-grow: 3;
+        width: auto;
+
+        hr {
+            width: 100%;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        flex-grow: 0.1;
+        border-bottom-style: none;
+    }
+}
+
+/*Style schriften*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+    color: clr.$textColorlight;
+    display: block;
+    margin: 0 0 2rem 0;
+    border-bottom-style: dotted;
+}
+
+span {
+    padding: 0 1rem 0 0;
+    color: red;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+/*Color style*/
+.cl_colorBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.cl_primaryColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$primaryColor;
+}
+
+.cl_secondColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$secondColor;
+}
+
+.cl_backgrundColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$backgrundColor;
+}
+
+.cl_backgrundColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$backgrundColor;
+}
+
+.cl_backgroundSecondColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$backgroundSecondColor;
+}
+
+.cl_hoverPrimaryColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$hoverPrimaryColor;
+}
+
+.cl_hoverSecondColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$hoverSecondColor;
+}
+
+.cl_primaryColor,
+.cl_secondColor,
+.cl_backgrundColor,
+.cl_backgroundSecondColor,
+.cl_hoverPrimaryColor,
+.cl_hoverSecondColor {
+    box-shadow: clr.$shadow-box;
+}
+
+/* Button style */
+button {
+    margin-top: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.cl_btnBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem 0;
+
+    .cl_btnStyle {
+        cursor: pointer;
+        padding: 1.2rem 3rem;
+    }
+
+    .cl_btnEins {
+        transition: all 300ms ease-in-out;
+        background-color: transparent;
+        color: clr.$primaryColor;
+        border: 1px solid clr.$primaryColor;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+
+        &:hover,
+        :focus {
+            background-color: clr.$primaryColor;
+            color: clr.$backgroundSecondColor;
+            box-shadow: clr.$shadow-box;
+        }
+    }
+
+    .cl_btnZwei {
+        transition: all 300ms ease-in-out;
+        background-color: clr.$hoverSecondColor;
+        color: clr.$backgroundSecondColor;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+
+        &:hover,
+        :focus {
+            background-color: clr.$hoverPrimaryColor;
+            color: clr.$backgroundSecondColor;
+            box-shadow: clr.$shadow-box;
+        }
+    }
+
+    .cl_btnDrei {
+        transition: all 300ms ease-in-out;
+        color: clr.$primaryColor;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+
+        &:hover,
+        :focus {
+            color: clr.$hoverPrimaryColor;
+            transform: scale(1.1) translateY(-3px);
+            -webkit-transform: scale(1.1) translateY(-3px);
+            -moz-transform: scale(1.1) translateY(-3px);
+            -ms-transform: scale(1.1) translateY(-3px);
+            -o-transform: scale(1.1) translateY(-3px);
+        }
+    }
+}
