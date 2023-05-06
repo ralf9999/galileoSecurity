@@ -34,6 +34,7 @@
         </button>
          <!-- desktop -->
         <div class="cl_logoText">
+            <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/Logo_galileo_neu_3_pfade.svg" alt="Galileo Security Technology">
         </div>
         <div id="id_menuareaSecond_hp" class="cl_menuareaSecondHome_hp">
             <div class="cl_areaNavBox">

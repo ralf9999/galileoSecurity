@@ -12,7 +12,7 @@
 	<div class="cl_404Box">
 		<div class="cl_404Area">
 			<div class="cl_roboterBox">
-				<img src="<?= home_url('wp-content/themes/da-boxenpromotion/assets/img/roboter.svg') ?>" alt="Roboter">
+				<img src="<?= home_url('wp-content/themes/galileoSecurity/assets/img/roboter.svg') ?>" alt="Roboter">
 			</div>
 			<div class="textBox">
 				<h1>Ups!</h1>

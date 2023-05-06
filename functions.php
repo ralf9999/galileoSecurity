@@ -253,7 +253,7 @@ if ( ! function_exists( 'hp_designThink_enqueue_scripts' ) ) :
         /* Pinegrow generated Enqueue Scripts Begin */
 
     wp_deregister_script( 'hp_designThink-standard' );
-    wp_enqueue_script( 'hp_designThink-standard', get_template_directory_uri() . '/assets/js/standard.js', false, null, true);
+    wp_enqueue_script( 'hp_designThink-standard', get_template_directory_uri() . '/assets/js/index.js', false, null, true);
 
     /* Pinegrow generated Enqueue Scripts End */
 
@@ -311,13 +311,3 @@ function wpb_widgets_init() {
  
 }
 add_action( 'widgets_init', 'wpb_widgets_init' );
-
-function pgwp_sanitize_placeholder($input) { return $input; }
-/*
- * Resource files included by Pinegrow.
- */
-/* Pinegrow generated Include Resources Begin */
-require_once "inc/custom.php";
-require_once "inc/wp_pg_helpers.php";
-
-?>
