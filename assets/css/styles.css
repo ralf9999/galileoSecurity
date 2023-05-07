@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff");
+  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-light.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-regular.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-medium.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -148,18 +148,174 @@ input:focus, textarea:focus, select:focus {
   padding: 0;
 }
 
-.bgImage {
-  position: absolute;
+/*------Header-----------
+###############################*/
+.cl_headerBGimageHome {
+  position: relative;
   top: 0;
   left: 0;
-  z-index: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
-.bgImage img {
+
+.cl_mobilNone {
+  display: none;
+}
+
+.cl_logoText {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 24rem;
+  height: auto;
+}
+.cl_logoText img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+.cl_navBox02 {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.cl_navBox02 li a {
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.cl_navBox02 li a:hover {
+  color: #bababa;
+  transform: scale(0.8) translateY(-3px);
+  -webkit-transform: scale(0.81) translateY(-3px);
+  -moz-transform: scale(0.81) translateY(-3px);
+  -ms-transform: scale(0.81) translateY(-3px);
+  -o-transform: scale(0.81) translateY(-3px);
+}
+
+.cl_menuareaSecondHome_hp {
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cl_bgHome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cl_headline {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #eeeeee;
+}
+.cl_headline h1 {
+  display: block;
+  margin: -20rem 0 1rem 0;
+}
+.cl_headline .cl_subline {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+/*##############Ende#################*/
+/*----------- media Query -----------
+######################################*/
+@media screen and (max-width: 666px) {
+  .cl_headline {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .cl_navBox02 {
+    display: none;
+  }
+  .cl_mobilNone, .hp_burger_button_cl {
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    top: 1.5rem;
+    display: block;
+  }
+}
+/*Burger Button--------
+############################*/
+button.hp_burger_button_cl {
+  overflow: hidden;
+  height: 65px;
+  width: 65px;
+  background-color: #ad4c03;
+  box-shadow: 0px 4px 9.8px rgba(0, 0, 0, 0.072), 0px 4px 14.5px rgba(0, 0, 0, 0.087), 0px 4px 80px rgba(0, 0, 0, 0.11);
+  border-radius: 1rem;
+  position: fixed;
+  top: 3rem;
+  right: 1.4rem;
+  z-index: 99999;
+  color: transparent;
+  cursor: pointer;
+  margin: 1rem 0 0 0;
+}
+
+.hp_burger_button_cl .hamburger {
+  color: transparent;
+  stroke: #ffffff;
+  transition: translate 500ms, rotate 500ms;
+  padding: 4px 0 0 12px;
+}
+
+.hp_burger_button_cl[aria-expanded=true] .hamburger {
+  translate: 1px -1px;
+  rotate: 0.125turn;
+  padding: 4px 0 0 14px;
+}
+
+.hp_burger_button_cl .line {
+  fill-opacity: 0;
+  color: transparent;
+  stroke: #ffffff;
+  transition: 500ms;
+  stroke-dasharray: 60 30 60 300;
+}
+
+.hp_burger_button_cl[aria-expanded=true] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
+}
+
+.btn-none {
+  opacity: 0;
+}
+
+.btn-active {
+  transition: all 350ms ease-in-out;
+  opacity: 1;
+}
+
+.navHidden01 {
+  top: -10rem;
+}
+
+/*############Ende###################*/
 
 /*# sourceMappingURL=styles.css.map */

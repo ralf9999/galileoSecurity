@@ -12,6 +12,7 @@
 
 <body>
     <header class="cl_headerBox cl_headerBGimageHome">
+       <img src="<?=$url?>/wp-content/themes/galileoSecurity/assets/img/r-architecture-MAnVoJlQUvg-unsplash.jpg" alt="" class="cl_bgHome"> 
         <!-- mobile -->
     <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_mobilNone">
             <div class="cl_areaNavBoxMobil">
@@ -39,7 +40,7 @@
         <div id="id_menuareaSecond_hp" class="cl_menuareaSecondHome_hp">
             <div class="cl_areaNavBox">
                 <?php wp_nav_menu( array(
-                                'menu' => 'Boxen Hauptmenu',
+                                'menu' => 'Hauptmenu',
                                 'menu_class' => 'cl_navBox02',
                                 'menu_id' => 'id_hauptmenu',
                                 'container' => 'ul',
@@ -48,5 +49,9 @@
 
             </div>
         </div>
+        <article class="cl_headline">
+            <h1>Galileo System Technology</h1>
+            <p class="cl_subline">Der Profi in Bereich Objektüberwachung</p>
+        </article>
     </header>
     <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>

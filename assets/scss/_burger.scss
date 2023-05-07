@@ -1,0 +1,55 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+/*Burger Button--------
+############################*/
+button.hp_burger_button_cl {
+    overflow: hidden;
+    height: 65px;
+    width: 65px;
+    background-color:clr.$primaryColor;
+    box-shadow: clr.$shadow-box;
+    border-radius: 1rem;
+    position: fixed;
+    top: 3rem;
+    right: 1.4rem;
+    z-index: 99999;
+    color: transparent;
+    cursor: pointer;
+    margin: 1rem 0 0 0 ;
+  }
+.hp_burger_button_cl .hamburger {
+    color: transparent;
+    stroke:#ffffff;
+    transition: translate 500ms, rotate 500ms;
+    padding: 4px 0 0 12px;
+  }
+  
+  .hp_burger_button_cl[aria-expanded="true"] .hamburger {
+    translate: 1px -1px;
+    rotate: 0.125turn;
+    padding: 4px 0 0 14px;
+  }
+  
+  .hp_burger_button_cl .line {
+    fill-opacity: 0;
+    color: transparent;
+    stroke:#ffffff;
+    transition: 500ms;
+    stroke-dasharray: 60 30 60 300;
+  }
+  
+  .hp_burger_button_cl[aria-expanded="true"] .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+  }
+  .btn-none{
+  opacity: 0;
+  }
+  .btn-active{
+    transition: all 350ms ease-in-out;
+    opacity: 1;
+}
+.navHidden01 {
+    top: -10rem;
+  }
+  /*############Ende###################*/
