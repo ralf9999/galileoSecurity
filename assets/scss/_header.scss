@@ -27,30 +27,50 @@
     object-fit: cover;
   }
 }
-.cl_navBox02 {
-  list-style: none;
-  padding-inline-start: 0;
+.cl_areaNavBox {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  .cl_navBox {
+    list-style: none;
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
 
-  li {
-    a {
-      transition: all 300ms ease-in-out;
-      -webkit-transition: all 300ms ease-in-out;
-      -moz-transition: all 300ms ease-in-out;
-      -ms-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      color: clr.$textColorDark;
-      text-decoration: none;
-      font-size: 2.4rem;
-      text-transform: uppercase;
-
+    li {
+      transition: scale 300ms ease-in-out, translate 300ms ease;
+      -webkit-transition: scale 300ms ease-in-out, translate 300ms ease;
+      -moz-transition: scale 300ms ease-in-out, translate 300ms ease;
+      -ms-transition: scale 300ms ease-in-out, translate 300ms ease;
+      -o-transition: scale 300ms ease-in-out, translate 300ms ease;
       &:hover {
-        color: clr.$textcolorLightHover;
-        transform: scale(0.8) translateY(-3px);
-        -webkit-transform: scale(0.81) translateY(-3px);
-        -moz-transform: scale(0.81) translateY(-3px);
-        -ms-transform: scale(0.81) translateY(-3px);
-        -o-transform: scale(0.81) translateY(-3px);
-      }
+        transition: scale 300ms ease-in-out, translate 300ms ease;
+        transform: translateY(-2px);
+        -webkit-transform: translateY(-2px);
+        -moz-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+        -o-transform: translateY(-2px);
+        -webkit-transition: scale 300ms ease-in-out, translate 300ms ease;
+        -moz-transition: scale 300ms ease-in-out, translate 300ms ease;
+        -ms-transition: scale 300ms ease-in-out, translate 300ms ease;
+        -o-transition: scale 300ms ease-in-out, translate 300ms ease;
+}
+      a {
+        transition: scale 300ms ease-in-out;
+        -webkit-transition: scale 300ms ease-in-out;
+        -moz-transition: scale 300ms ease-in-out;
+        -ms-transition: scale 300ms ease-in-out;
+        -o-transition: scale 300ms ease-in-out;
+        color: clr.$textColorDark;
+        text-decoration: none;
+        font-size: 2rem;
+        text-transform: uppercase;
+        &:hover{
+          color: clr.$textcolorLightHover;
+        }
+        }
     }
   }
 }
@@ -76,6 +96,7 @@
 .cl_headline{
   width: 100%;
   height: 100%;
+  margin: -20rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,12 +104,87 @@
   color: clr.$textColorDark;
   h1{
     display: block;
-    margin: -20rem 0 1rem 0;
+    margin: 1rem 0;
   }
 .cl_subline{
   text-transform: uppercase;
   font-size: 2.4rem;
 }
+}
+/*----------- Sub Header --------
+###################################*/
+.cl_headerBGimageHomeSub {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+}
+.cl_headline{
+  width: 100%;
+  height: 100%;
+  margin: -7rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: clr.$textColorDark;
+  h1{
+    display: block;
+    margin: 1rem 0;
+  }
+}
+/*------------ Mobil Nav -----------
+####################################*/
+
+.cl_mobilActiv {
+  transition: all 500ms ease-in-out;
+  transform: translateX(0);
+}
+
+.cl_mobilNone {
+  transition: all 500ms ease-in-out;
+  transform: translateX(-110%);
+  width: 0;
+  height: 0;
+}
+.cl_menuarea_mobil_slid_hp{
+  transition: all 500ms ease-in-out;
+  height: 100vh;
+  width: 320px;
+ 
+}
+.cl_menuarea_mobil_hp{
+display: block;
+position: fixed;
+z-index: 9998;
+top:0;
+box-shadow: clr.$shadow-box;
+background-color:clr.$backgrundColor;
+overflow: hidden;
+}
+.cl_areaNavBoxMobil{
+  .cl_navBoxMobil{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 6rem 0 0 0;
+      padding: 2rem 0 0 2rem;
+      gap: 2rem;
+      li {
+        list-style: none;
+      a{
+          color: clr.$textColorDark;
+          text-decoration: none;
+          font-size: 2rem;
+          text-transform: uppercase;
+      }
+    }
+  }
+}
+.cl_mobilLogo{
+  margin: 1rem auto;
+  width: 24rem;
 }
 /*##############Ende#################*/
 
@@ -102,16 +198,16 @@
   }
   
 }
-@media screen and (max-width:991px) {
-  .cl_navBox02{
-display: none;
+@media screen and (max-width:1200px) {
+  .cl_areaNavBox{
+    display: none;
   }
   .cl_mobilNone, .hp_burger_button_cl{
     position: fixed;
     z-index: 9999;
     right: 0;
     top: 1.5rem;
-    display: block;
+    display: none;
   }
   
 }

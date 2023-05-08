@@ -14,25 +14,28 @@
     <header class="cl_headerBox cl_headerBGimageHome">
        <img src="<?=$url?>/wp-content/themes/galileoSecurity/assets/img/r-architecture-MAnVoJlQUvg-unsplash.jpg" alt="" class="cl_bgHome"> 
         <!-- mobile -->
-    <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_mobilNone">
+    <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_menuarea_mobil_slid_hp cl_mobilNone">
+            <div class="cl_logoTex cl_mobilLogo">
+                <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/Logo_galileo_neu_3_pfade.svg" alt="Galileo Security Technology">
+            </div>
             <div class="cl_areaNavBoxMobil">
                 <?php wp_nav_menu( array(
-                                'menu' => 'Boxen Hauptmenu',
-                                'menu_class' => 'cl_navBox',
+                                'menu' => 'Hauptmenu',
+                                'menu_class' => 'cl_navBoxMobil',
                                 'menu_id' => 'id_hauptmenu',
                                 'container' => 'li',
                                 'depth' => '2',
                         ) ); ?>
             </div>
         </div>
-        <button id="id_burgerBox02" class="hp_burger_button_cl btn-none" aria-controls="primary-navigation"
+        <div id="id_burger" class="cl_hp_burger_button cl_btn-none" aria-controls="primary-navigation"
             aria-expanded="false">
-            <svg class="hamburger" viewBox="-10 -10 120 120" width="65">
+            <svg class="cl_svgBurger" viewBox="-10 -10 120 120" width="65">
                 <path class="line" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"
                     d="m 5 30 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
                 </path>
             </svg>
-        </button>
+        </div>
          <!-- desktop -->
         <div class="cl_logoText">
             <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/Logo_galileo_neu_3_pfade.svg" alt="Galileo Security Technology">
@@ -41,7 +44,7 @@
             <div class="cl_areaNavBox">
                 <?php wp_nav_menu( array(
                                 'menu' => 'Hauptmenu',
-                                'menu_class' => 'cl_navBox02',
+                                'menu_class' => 'cl_navBox',
                                 'menu_id' => 'id_hauptmenu',
                                 'container' => 'ul',
                                 'depth' => '2',
@@ -50,6 +53,7 @@
             </div>
         </div>
         <article class="cl_headline">
+            <p class="cl_subline">Wir bauen unsere Homepage für Sie um.</p>
             <h1>Galileo System Technology</h1>
             <p class="cl_subline">Der Profi in Bereich Objektüberwachung</p>
         </article>

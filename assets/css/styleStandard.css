@@ -1,21 +1,3 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-light.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-regular.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-medium.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
 body {
   font-family: "Roboto";
   font-size: 10px;
@@ -68,7 +50,7 @@ h6, p, li, a, span, button, input, label {
 p {
   line-height: 2.2rem;
   word-spacing: 0.1rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0;
   hyphens: auto;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -78,6 +60,23 @@ p {
 .cl_subline {
   text-transform: uppercase;
   font-weight: 300;
+}
+
+.cl_h5Abstand {
+  display: inline-block;
+  margin: 2rem 0 1rem 0;
+  font-weight: 300;
+}
+
+.cl_extrazeilenAbstand {
+  line-height: 2.8rem;
+}
+
+.cl_ohneTrennung {
+  hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
 }
 
 html {
@@ -144,8 +143,16 @@ input:focus, textarea:focus, select:focus {
 .cl_boxingArea {
   position: relative;
   width: min(1260px, 70%);
-  margin: 5rem auto 8rem auto;
+  margin: 0rem auto 0rem auto;
   padding: 0;
+}
+
+.cl_wrapperMargin {
+  margin: 7rem auto 10rem auto;
+}
+
+.cl_informationsText {
+  width: 100%;
 }
 
 .cl_wrapper {
@@ -227,13 +234,13 @@ span {
 .cl_backgrundColor {
   width: 25rem;
   height: 25rem;
-  background-color: #000;
+  background-color: #ad4c03;
 }
 
 .cl_backgrundColor {
   width: 25rem;
   height: 25rem;
-  background-color: #000;
+  background-color: #ad4c03;
 }
 
 .cl_backgroundSecondColor {

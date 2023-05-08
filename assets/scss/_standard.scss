@@ -57,7 +57,14 @@ input:focus, textarea:focus, select:focus {
 .cl_boxingArea{
     position: relative;
     width: min(1260px, 70%);
-    margin: 5rem auto 8rem auto;
+    // margin: 5rem auto 8rem auto;
+    margin: 0rem auto 0rem auto;
     padding: 0;
 
+}
+.cl_wrapperMargin{
+    margin: 7rem auto 10rem auto;
+}
+.cl_informationsText{
+    width: 100%;
 }

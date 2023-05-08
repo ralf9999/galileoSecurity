@@ -1,21 +1,3 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-light.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-regular.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-medium.woff2") format("woff2"), url("http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/fonts/roboto-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
 body {
   font-family: "Roboto";
   font-size: 10px;
@@ -68,7 +50,7 @@ h6, p, li, a, span, button, input, label {
 p {
   line-height: 2.2rem;
   word-spacing: 0.1rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0;
   hyphens: auto;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -80,6 +62,41 @@ p {
   font-weight: 300;
 }
 
+.cl_h5Abstand {
+  display: inline-block;
+  margin: 2rem 0 1rem 0;
+  font-weight: 300;
+}
+
+.cl_extrazeilenAbstand {
+  line-height: 2.8rem;
+}
+
+.cl_ohneTrennung {
+  hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://galileo-security.de/wp-content/themes/galileoSecurity/assets/fonts/roboto-light.woff2") format("woff2"), url("https://galileo-security.de/wp-content/themes/galileoSecurity/assets/fonts/roboto-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("https://galileo-security.de/wp-content/themes/galileoSecurity/assets/fonts/roboto-regular.woff2") format("woff2"), url("https://galileo-security.de/wp-content/themes/galileoSecurity/assets/fonts/roboto-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("https://galileo-security.de/wp-content/themes/galileoSecurity/assets/fonts/roboto-medium.woff2") format("woff2"), url("https://galileo-security.de/wp-content/themes/galileoSecurity/assets/fonts/roboto-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -144,8 +161,16 @@ input:focus, textarea:focus, select:focus {
 .cl_boxingArea {
   position: relative;
   width: min(1260px, 70%);
-  margin: 5rem auto 8rem auto;
+  margin: 0rem auto 0rem auto;
   padding: 0;
+}
+
+.cl_wrapperMargin {
+  margin: 7rem auto 10rem auto;
+}
+
+.cl_informationsText {
+  width: 100%;
 }
 
 /*------Header-----------
@@ -175,28 +200,51 @@ input:focus, textarea:focus, select:focus {
   object-fit: cover;
 }
 
-.cl_navBox02 {
+.cl_areaNavBox {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.cl_areaNavBox .cl_navBox {
   list-style: none;
   padding-inline-start: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.cl_navBox02 li a {
-  transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
+.cl_areaNavBox .cl_navBox li {
+  transition: scale 300ms ease-in-out, translate 300ms ease;
+  -webkit-transition: scale 300ms ease-in-out, translate 300ms ease;
+  -moz-transition: scale 300ms ease-in-out, translate 300ms ease;
+  -ms-transition: scale 300ms ease-in-out, translate 300ms ease;
+  -o-transition: scale 300ms ease-in-out, translate 300ms ease;
+}
+.cl_areaNavBox .cl_navBox li:hover {
+  transition: scale 300ms ease-in-out, translate 300ms ease;
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  -webkit-transition: scale 300ms ease-in-out, translate 300ms ease;
+  -moz-transition: scale 300ms ease-in-out, translate 300ms ease;
+  -ms-transition: scale 300ms ease-in-out, translate 300ms ease;
+  -o-transition: scale 300ms ease-in-out, translate 300ms ease;
+}
+.cl_areaNavBox .cl_navBox li a {
+  transition: scale 300ms ease-in-out;
+  -webkit-transition: scale 300ms ease-in-out;
+  -moz-transition: scale 300ms ease-in-out;
+  -ms-transition: scale 300ms ease-in-out;
+  -o-transition: scale 300ms ease-in-out;
   color: #eeeeee;
   text-decoration: none;
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
-.cl_navBox02 li a:hover {
+.cl_areaNavBox .cl_navBox li a:hover {
   color: #bababa;
-  transform: scale(0.8) translateY(-3px);
-  -webkit-transform: scale(0.81) translateY(-3px);
-  -moz-transform: scale(0.81) translateY(-3px);
-  -ms-transform: scale(0.81) translateY(-3px);
-  -o-transform: scale(0.81) translateY(-3px);
 }
 
 .cl_menuareaSecondHome_hp {
@@ -223,6 +271,7 @@ input:focus, textarea:focus, select:focus {
 .cl_headline {
   width: 100%;
   height: 100%;
+  margin: -20rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,11 +280,89 @@ input:focus, textarea:focus, select:focus {
 }
 .cl_headline h1 {
   display: block;
-  margin: -20rem 0 1rem 0;
+  margin: 1rem 0;
 }
 .cl_headline .cl_subline {
   text-transform: uppercase;
   font-size: 2.4rem;
+}
+
+/*----------- Sub Header --------
+###################################*/
+.cl_headerBGimageHomeSub {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+}
+
+.cl_headline {
+  width: 100%;
+  height: 100%;
+  margin: -7rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #eeeeee;
+}
+.cl_headline h1 {
+  display: block;
+  margin: 1rem 0;
+}
+
+/*------------ Mobil Nav -----------
+####################################*/
+.cl_mobilActiv {
+  transition: all 500ms ease-in-out;
+  transform: translateX(0);
+}
+
+.cl_mobilNone {
+  transition: all 500ms ease-in-out;
+  transform: translateX(-110%);
+  width: 0;
+  height: 0;
+}
+
+.cl_menuarea_mobil_slid_hp {
+  transition: all 500ms ease-in-out;
+  height: 100vh;
+  width: 320px;
+}
+
+.cl_menuarea_mobil_hp {
+  display: block;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  box-shadow: 0px 4px 9.8px rgba(0, 0, 0, 0.072), 0px 4px 14.5px rgba(0, 0, 0, 0.087), 0px 4px 80px rgba(0, 0, 0, 0.11);
+  background-color: #ad4c03;
+  overflow: hidden;
+}
+
+.cl_areaNavBoxMobil .cl_navBoxMobil {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 6rem 0 0 0;
+  padding: 2rem 0 0 2rem;
+  gap: 2rem;
+}
+.cl_areaNavBoxMobil .cl_navBoxMobil li {
+  list-style: none;
+}
+.cl_areaNavBoxMobil .cl_navBoxMobil li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.cl_mobilLogo {
+  margin: 1rem auto;
+  width: 24rem;
 }
 
 /*##############Ende#################*/
@@ -247,8 +374,8 @@ input:focus, textarea:focus, select:focus {
     padding: 0 1rem;
   }
 }
-@media screen and (max-width: 991px) {
-  .cl_navBox02 {
+@media screen and (max-width: 1200px) {
+  .cl_areaNavBox {
     display: none;
   }
   .cl_mobilNone, .hp_burger_button_cl {
@@ -256,12 +383,13 @@ input:focus, textarea:focus, select:focus {
     z-index: 9999;
     right: 0;
     top: 1.5rem;
-    display: block;
+    display: none;
   }
 }
 /*Burger Button--------
 ############################*/
-button.hp_burger_button_cl {
+div.cl_hp_burger_button {
+  appearance: none;
   overflow: hidden;
   height: 65px;
   width: 65px;
@@ -269,7 +397,7 @@ button.hp_burger_button_cl {
   box-shadow: 0px 4px 9.8px rgba(0, 0, 0, 0.072), 0px 4px 14.5px rgba(0, 0, 0, 0.087), 0px 4px 80px rgba(0, 0, 0, 0.11);
   border-radius: 1rem;
   position: fixed;
-  top: 3rem;
+  top: 0;
   right: 1.4rem;
   z-index: 99999;
   color: transparent;
@@ -277,20 +405,20 @@ button.hp_burger_button_cl {
   margin: 1rem 0 0 0;
 }
 
-.hp_burger_button_cl .hamburger {
+.cl_hp_burger_button .cl_svgBurger {
   color: transparent;
   stroke: #ffffff;
   transition: translate 500ms, rotate 500ms;
-  padding: 4px 0 0 12px;
+  padding: 10px 0 0 16px;
 }
 
-.hp_burger_button_cl[aria-expanded=true] .hamburger {
-  translate: 1px -1px;
+.cl_hp_burger_button[aria-expanded=true] .cl_svgBurger {
+  translate: 0px 1px;
   rotate: 0.125turn;
-  padding: 4px 0 0 14px;
+  padding: 6px 0 0 16px;
 }
 
-.hp_burger_button_cl .line {
+.cl_hp_burger_button .line {
   fill-opacity: 0;
   color: transparent;
   stroke: #ffffff;
@@ -298,24 +426,56 @@ button.hp_burger_button_cl {
   stroke-dasharray: 60 30 60 300;
 }
 
-.hp_burger_button_cl[aria-expanded=true] .line {
-  stroke-dasharray: 60 105 60 300;
+.cl_hp_burger_button[aria-expanded=true] .line {
+  stroke-dasharray: 58 105 58 300;
   stroke-dashoffset: -90;
+  padding: 0px 6px 0 0px;
+  translate: 1px -1px;
 }
 
-.btn-none {
-  opacity: 0;
+.cl_btn-none {
+  opacity: 1;
 }
 
-.btn-active {
+.cl_btn-active {
   transition: all 350ms ease-in-out;
   opacity: 1;
 }
 
-.navHidden01 {
-  top: -10rem;
+/*############Ende###################*/
+.cl_htmlIndex {
+  height: 200px;
+  width: 100%;
+  background-color: #918f8f;
 }
 
-/*############Ende###################*/
+/*------footer SubWrapper--------------*/
+.cl_footerDown_hp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #666666;
+  padding: 1rem;
+}
+
+.cl_footerCopyright_hp p {
+  color: #eeeeee;
+  font-size: 1.2rem;
+}
+
+.cl_footerSecondBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding-block-start: 0;
+}
+.cl_footerSecondBox li a {
+  text-decoration: none;
+  color: #eeeeee;
+  font-size: 1.2rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

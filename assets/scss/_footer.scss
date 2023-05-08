@@ -1,0 +1,28 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+/*------footer SubWrapper--------------*/
+.cl_footerDown_hp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: clr.$backgrundDarkColor;
+    padding: 1rem;
+}
+.cl_footerCopyright_hp p{
+        color: clr.$textColorDark;
+        font-size: 1.2rem;
+}
+.cl_footerSecondBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    padding-block-start: 0;
+    li a{
+        text-decoration: none;
+        color: clr.$textColorDark;
+        font-size: 1.2rem;
+    }
+}
