@@ -6,11 +6,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: clr.$backgrundDarkColor;
+    background-color: clr.$clr_backgrundDarkColor;
     padding: 1rem;
 }
 .cl_footerCopyright_hp p{
-        color: clr.$textColorDark;
+        color: clr.$clr_textColorDark;
         font-size: 1.2rem;
 }
 .cl_footerSecondBox{
@@ -22,7 +22,7 @@
     padding-block-start: 0;
     li a{
         text-decoration: none;
-        color: clr.$textColorDark;
+        color: clr.$clr_textColorDark;
         font-size: 1.2rem;
     }
 }

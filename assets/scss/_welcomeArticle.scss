@@ -1,0 +1,191 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+
+/*----------- Welcome Bereich ---------
+#######################################*/
+.welcomeGridBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: max-content 80rem;
+    grid-template-areas:
+        " welcomeTitle welcomeTitle "
+        " contentBox contentBox"
+    ;
+}
+
+.cl_welcomeTitle {
+    grid-area: welcomeTitle;
+}
+
+.cl_welcomeContentBox {
+    grid-area: contentBox;
+}
+
+
+.cl_welcomeTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cl_welcomeContentBox {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cl_imageWrapper {
+        width: min(65rem, 60%);
+        aspect-ratio: 1/0.8;
+        margin: 0 0 0 8%;
+        overflow: hidden;
+        transform: rotate(-8deg);
+        -webkit-transform: rotate(-8deg);
+        -moz-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+        -o-transform: rotate(-8deg);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            margin: 0 ;
+            box-shadow: clr.$clr_shadow-box;
+        }
+    }
+    .cl_contentWrapper {
+        width: 50%;
+        height: 100%;
+
+        .cl_firstContent {
+            position: relative;
+            width:100%;
+            height: 70%;
+            margin: 16rem 0 0 -12%;
+            .cl_bgBox {
+                position: absolute;
+                top: 8rem;
+                left: 5rem;
+                background-color: clr.$clr_backgrundPrimayColor;
+                width: 50%;
+                max-width: 48rem;
+                height: 40%;
+            }
+
+            .cl_welcomedescript {
+                position: absolute;
+                top: 12rem;
+                left: 9rem;
+                background-color: clr.$clr_backgroundSecondColor;
+                width: 80%;
+                max-width: 55rem;
+                height: fit-content;
+                padding: 2rem;
+                box-shadow: clr.$clr_shadow-box;
+                overflow: hidden;
+            }
+        }
+    }
+
+    }
+
+    /*-------------- Sicherheit Section -----------
+    ###############################################*/
+
+    .cl_bgColorSection02{
+        background-color: clr.$clr_backgroundSwitchColor;
+        fill: clr.$clr_backgroundSwitchColor;
+    }
+        .welcome02GridBox{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: max-content 80rem;
+            grid-template-areas:
+                " welcomeTitle welcomeTitle "
+                " contentBox contentBox"
+            ;
+    
+            .cl_welcomeTitle {
+                grid-area: welcomeTitle;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 auto;
+                width: 100%;
+                padding: 2rem;
+                text-align: center;
+            }
+    
+            .cl_welcomeContentBox {
+                grid-area: contentBox;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction:row-reverse;    
+                .cl_imageWrapper {
+                    width: min(65rem, 60%);
+                    aspect-ratio: 1/0.8;
+                    margin: 0 0 0 -12%;
+                    overflow: hidden;
+                    transform: rotate(8deg);
+                    -webkit-transform: rotate(8deg);
+                    -moz-transform: rotate(8deg);
+                    -ms-transform: rotate(8deg);
+                    -o-transform: rotate(8deg);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        margin: 0;
+                        box-shadow: clr.$clr_shadow-box;
+                    }
+                }
+    
+                .cl_contentWrapper {
+                    width: 50%;
+                    height: 100%;
+    
+                    .cl_firstContent {
+                        position: relative;
+                        width: 100%;
+                        height: 70%;
+                        margin: 16rem 0 0 0;
+    
+                        .cl_bgBox {
+                            position: absolute;
+                            top: 8rem;
+                            left: 5rem;
+                            background-color: clr.$clr_backgrundPrimayColor;
+                            width: 50%;
+                            max-width: 48rem;
+                            height: 40%;
+                        }
+    
+                        .cl_welcomedescript {
+                            position: absolute;
+                            top: 12rem;
+                            left: 9rem;
+                            background-color: clr.$clr_backgroundSecondColor;
+                            width: 80%;
+                            max-width: 55rem;
+                            height: fit-content;
+                            padding: 2rem;
+                            box-shadow: clr.$clr_shadow-box;
+                            overflow: hidden;
+                        }
+                    }
+                }
+    
+            }
+        }

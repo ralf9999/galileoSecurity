@@ -1,6 +1,9 @@
 @forward 'color';
 @forward 'fonts';
 @forward 'standard';
+@forward 'headerSlider';
+@forward 'headerSliderContent';
+@forward 'importFontsServer';
 @use 'color' as clr;
 
 .cl_wrapper {
@@ -8,7 +11,7 @@
     padding: 0 2rem;
 }
 .cl_hover{
-    color: clr.$textcolorLightHover;
+    color: clr.$clr_textcolorLightHover;
 }
 //trennline Style
 .cl_trennline {
@@ -45,7 +48,7 @@ h6,
 p,
 a,
 li {
-    color: clr.$textColorlight;
+    color: clr.$clr_textColorlight;
     display: block;
     margin: 0 0 2rem 0;
     border-bottom-style: dotted;
@@ -72,54 +75,92 @@ span {
 .cl_primaryColor {
     width: 25rem;
     height: 25rem;
-    background-color: clr.$primaryColor;
+    background-color: clr.$clr_primaryColor;
 }
 
 .cl_secondColor {
     width: 25rem;
     height: 25rem;
-    background-color: clr.$secondColor;
+    background-color: clr.$clr_secondColor;
 }
 
-.cl_backgrundColor {
+.cl_textColorLight {
     width: 25rem;
     height: 25rem;
-    background-color: clr.$backgrundColor;
+    background-color: clr.$clr_textColorlight;
 }
 
-.cl_backgrundColor {
+.cl_textColorDark {
     width: 25rem;
     height: 25rem;
-    background-color: clr.$backgrundColor;
+    background-color: clr.$clr_textColorDark;
 }
 
+.cl_textcolorLightHover {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$clr_textcolorLightHover;
+}
+
+.cl_textcolorDarkHover {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$clr_textcolorDarkHover;
+}
+
+.cl_backgrundPrimayColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$clr_backgrundPrimayColor;
+}
+
+.cl_backgrundDarkColor {
+    width: 25rem;
+    height: 25rem;
+    background-color: clr.$clr_backgrundDarkColor;
+}
 .cl_backgroundSecondColor {
     width: 25rem;
     height: 25rem;
-    background-color: clr.$backgroundSecondColor;
+    background-color: clr.$clr_backgroundSecondColor;
 }
-
-.cl_hoverPrimaryColor {
+.cl_hoverPrimaryColor{
     width: 25rem;
     height: 25rem;
-    background-color: clr.$hoverPrimaryColor;
+    background-color: clr.$clr_hoverPrimaryColor;
 }
-
-.cl_hoverSecondColor {
+.cl_hoverSecondColor{
     width: 25rem;
     height: 25rem;
-    background-color: clr.$hoverSecondColor;
+    background-color: clr.$clr_hoverSecondColor;
 }
-
 .cl_primaryColor,
 .cl_secondColor,
-.cl_backgrundColor,
+.cl_textColorLight,
+.cl_textColorDark,
+.cl_textcolorLightHover,
+.cl_textcolorDarkHover,
+.cl_backgrundPrimayColor,
+.cl_backgrundDarkColor,
 .cl_backgroundSecondColor,
 .cl_hoverPrimaryColor,
 .cl_hoverSecondColor {
-    box-shadow: clr.$shadow-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: clr.$clr_shadow-box;
+    font-size: 2.4rem;
+    overflow: hidden;
+    // hyphens: auto;
+    // -webkit-hyphens: auto;
+    // -moz-hyphens: auto;
+    // -ms-hyphens: auto;
+    box-sizing: border-box;
+    text-align: center;
 }
-
+.cl_primaryColor,.cl_backgrundPrimayColor,.cl_textColorLight,.cl_backgrundDarkColor{
+    color: clr.$clr_textColorDark;
+}
 /* Button style */
 button {
     margin-top: 0em;
@@ -150,8 +191,8 @@ button:focus {
     .cl_btnEins {
         transition: all 300ms ease-in-out;
         background-color: transparent;
-        color: clr.$primaryColor;
-        border: 1px solid clr.$primaryColor;
+        color: clr.$clr_primaryColor;
+        border: 1px solid clr.$clr_primaryColor;
         -webkit-transition: all 300ms ease-in-out;
         -moz-transition: all 300ms ease-in-out;
         -ms-transition: all 300ms ease-in-out;
@@ -159,16 +200,16 @@ button:focus {
 
         &:hover,
         :focus {
-            background-color: clr.$primaryColor;
-            color: clr.$backgroundSecondColor;
-            box-shadow: clr.$shadow-box;
+            background-color: clr.$clr_primaryColor;
+            color: clr.$clr_backgroundSecondColor;
+            box-shadow: clr.$clr_shadow-box;
         }
     }
 
     .cl_btnZwei {
         transition: all 300ms ease-in-out;
-        background-color: clr.$hoverSecondColor;
-        color: clr.$backgroundSecondColor;
+        background-color: clr.$clr_hoverSecondColor;
+        color: clr.$clr_backgroundSecondColor;
         -webkit-transition: all 300ms ease-in-out;
         -moz-transition: all 300ms ease-in-out;
         -ms-transition: all 300ms ease-in-out;
@@ -176,15 +217,15 @@ button:focus {
 
         &:hover,
         :focus {
-            background-color: clr.$hoverPrimaryColor;
-            color: clr.$backgroundSecondColor;
-            box-shadow: clr.$shadow-box;
+            background-color: clr.$clr_hoverPrimaryColor;
+            color: clr.$clr_backgroundSecondColor;
+            box-shadow: clr.$clr_shadow-box;
         }
     }
 
     .cl_btnDrei {
         transition: all 300ms ease-in-out;
-        color: clr.$primaryColor;
+        color: clr.$clr_primaryColor;
         -webkit-transition: all 300ms ease-in-out;
         -moz-transition: all 300ms ease-in-out;
         -ms-transition: all 300ms ease-in-out;
@@ -192,7 +233,7 @@ button:focus {
 
         &:hover,
         :focus {
-            color: clr.$hoverPrimaryColor;
+            color: clr.$clr_hoverPrimaryColor;
             transform: scale(1.1) translateY(-3px);
             -webkit-transform: scale(1.1) translateY(-3px);
             -moz-transform: scale(1.1) translateY(-3px);

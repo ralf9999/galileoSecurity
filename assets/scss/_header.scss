@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 106vh;
 }
 
 .cl_mobilNone {
@@ -63,12 +63,12 @@
         -moz-transition: scale 300ms ease-in-out;
         -ms-transition: scale 300ms ease-in-out;
         -o-transition: scale 300ms ease-in-out;
-        color: clr.$textColorDark;
+        color: clr.$clr_textColorDark;
         text-decoration: none;
         font-size: 2rem;
         text-transform: uppercase;
         &:hover{
-          color: clr.$textcolorLightHover;
+          color: clr.$clr_textcolorLightHover;
         }
         }
     }
@@ -82,7 +82,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: rgba($color: #000000, $alpha: 0.3);
+  background-color: clr.$clr_headerBarColor;
 }
 .cl_bgHome{
   position: absolute;
@@ -101,7 +101,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: clr.$textColorDark;
+  color: clr.$clr_textColorDark;
   h1{
     display: block;
     margin: 1rem 0;
@@ -128,7 +128,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: clr.$textColorDark;
+  color: clr.$clr_textColorDark;
   h1{
     display: block;
     margin: 1rem 0;
@@ -159,8 +159,8 @@ display: block;
 position: fixed;
 z-index: 9998;
 top:0;
-box-shadow: clr.$shadow-box;
-background-color:clr.$backgrundColor;
+box-shadow: clr.$clr_shadow-box;
+background-color:clr.$clr_backgrundPrimayColor;
 overflow: hidden;
 }
 .cl_areaNavBoxMobil{
@@ -174,7 +174,7 @@ overflow: hidden;
       li {
         list-style: none;
       a{
-          color: clr.$textColorDark;
+          color: clr.$clr_textColorDark;
           text-decoration: none;
           font-size: 2rem;
           text-transform: uppercase;
@@ -186,7 +186,6 @@ overflow: hidden;
   margin: 1rem auto;
   width: 24rem;
 }
-/*##############Ende#################*/
 
 /*----------- media Query -----------
 ######################################*/

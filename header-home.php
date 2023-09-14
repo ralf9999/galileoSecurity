@@ -1,4 +1,9 @@
-<?php $url = home_url()?>
+<?php 
+$url = home_url();
+$attachment_id = 56;
+
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -11,8 +16,7 @@
 </head>
 
 <body>
-    <header class="cl_headerBox cl_headerBGimageHome">
-       <img src="<?=$url?>/wp-content/themes/galileoSecurity/assets/img/r-architecture-MAnVoJlQUvg-unsplash.jpg" alt="" class="cl_bgHome"> 
+    <header class="cl_headerBox">
         <!-- mobile -->
     <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_menuarea_mobil_slid_hp cl_mobilNone">
             <div class="cl_logoTex cl_mobilLogo">
@@ -52,10 +56,48 @@
 
             </div>
         </div>
-        <article class="cl_headline">
-            <p class="cl_subline">Wir bauen unsere Homepage für Sie um.</p>
-            <h1>Galileo System Technology</h1>
-            <p class="cl_subline">Der Profi in Bereich Objektüberwachung</p>
+        <section class="hp_slider">
+        <!--Slider input Button-->
+        <article class="hp_sliders">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--Silder Image Elemente-->
+            <div class="slid first slidContent">
+                <h2>Das Ist eine Überschrift</h2>
+                <img src="<?php echo wp_get_attachment_image_url( 56, 'full' )?>" alt="">
+            </div>
+            <div class="slid slidContent">
+                <img src="<?php echo wp_get_attachment_image_url( 57, 'full' )?>" alt="">
+            </div>
+            <div class="slid slidContent">
+                <img src="<?php echo wp_get_attachment_image_url( 58, 'full' )?>" alt="">
+            </div>
+            <div class=" slid slidContent">
+                <img src="<?php echo wp_get_attachment_image_url( 59, 'full' )?>" alt="">
+            </div>
+            <!--Automatische Slider -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!--Slider Manuell -->
+            <div class="navigation-manuell">
+                <label for="radio1" class="manuell-btn"></label>
+                <label for="radio2" class="manuell-btn"></label>
+                <label for="radio3" class="manuell-btn"></label>
+                <label for="radio4" class="manuell-btn"></label>
+            </div>
         </article>
+    </section>
     </header>
+    <div class="cl_polyDreieck" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="1955" height="70.783" viewBox="0 0 1955 70.783">
+        <path id="Pfad_29" data-name="Pfad 29" d="M694.04,43.217,1955,114H0Z" transform="translate(0 -43.217)" fill="#fff"/>
+    </svg>
+    </div>
+
     <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>
