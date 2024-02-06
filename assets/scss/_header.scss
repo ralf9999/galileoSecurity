@@ -8,6 +8,8 @@
   left: 0;
   width: 100%;
   height: 106vh;
+  overflow: hidden;
+  display: table-caption
 }
 
 .cl_mobilNone {
@@ -16,7 +18,7 @@
 
 .cl_logoText {
   position: absolute;
-  top: 1rem;
+  top: 0.6rem;
   left: 0;
   width: 24rem;
   height: auto;
@@ -186,14 +188,80 @@ overflow: hidden;
   margin: 1rem auto;
   width: 24rem;
 }
+/*-----------Header_wrapper------------
+#######################################-*/
+.cl_header_wrapper_hp{
+  width: 100%;
+  height: 65rem;
+  margin: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.cl_header-bg_hp{
+  position: absolute;
+  z-index: 1;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: max-content;
+  object-fit: cover;
+  object-position: center;
 
+}
+/*------- header Content ---------
+##################################*/
+.cl_header-content_hp{
+  position:absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  width: fit-content;
+  background-color: clr.$clr_headerBarColor;
+  padding: 5rem 10rem 3rem 5rem;
+  h1{
+    color: clr.$clr_textColorDark;
+  }
+  h5{
+    color: clr.$clr_textColorDark;
+  }
+}
 /*----------- media Query -----------
 ######################################*/
-
+@media screen and (max-width:526px) {
+  .cl_header-content_hp{
+    width: 100%;
+    padding: 3rem 1rem;
+    h1{
+      font-size: fts.$fts_font_sizeH1480;
+      line-height: fts.$fts_font_sizeH1_height480;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+}
+  }
+  
+}
 @media screen and (max-width:666px) {
   .cl_headline{
     text-align: center;
     padding: 0 1rem;
+  }
+  
+}
+@media screen and (max-width:833px) {
+  .cl_header-content_hp{
+    width: 100%;
+    padding: 3rem 1rem;
+    h1{
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      display: block;
+      margin: 0 0 0.6rem 0;
+}
   }
   
 }

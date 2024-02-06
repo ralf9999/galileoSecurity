@@ -41,6 +41,7 @@ $attachment_id = 56;
             </svg>
         </div>
          <!-- desktop -->
+         <H1>Hallo Welt</H1>
         <div class="cl_logoText">
             <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/Logo_galileo_neu_3_pfade.svg" alt="Galileo Security Technology">
         </div>
@@ -56,43 +57,93 @@ $attachment_id = 56;
 
             </div>
         </div>
-        <section class="hp_slider">
-        <!--Slider input Button-->
-        <article class="hp_sliders">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <!--Silder Image Elemente-->
-            <div class="slid first slidContent">
-                <h2>Das Ist eine Überschrift</h2>
-                <img src="<?php echo wp_get_attachment_image_url( 56, 'full' )?>" alt="">
+    <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+          <div class="slidContent">
+                <div class="slidOff_Content">
+                    <figure class="imgCam01">
+                        <img src="<?php echo wp_get_attachment_image_url(61, 'full')?>" alt="">
+                    </figure>
+                    <figure class="imgCam02">
+                        <img src="<?php echo wp_get_attachment_image_url(60, 'full')?>" alt="">
+                    </figure>
+                    <figure class="imgCam03">
+                    <img src="<?php echo wp_get_attachment_image_url(63, 'full')?>" alt="">
+                </figure>
+                    <div class="singleContent">
+                        <h3>Überwachungssysteme für Private Objekte</h3>
+                        <p>Schutzen Sie Ihr eigen Heim mit unsere Systemen</p>
+                    </div>
+                </div>
+                <img src="<?php echo wp_get_attachment_image_url( 66, 'full' )?>" alt="">
             </div>
-            <div class="slid slidContent">
-                <img src="<?php echo wp_get_attachment_image_url( 57, 'full' )?>" alt="">
+          </div>
+          <div class="slide">
+            <div class="slidContent">
+            <div class="slidOff_Content">
+                    <figure class="imgCam01">
+                        <img src="<?php echo wp_get_attachment_image_url(61, 'full')?>" alt="">
+                    </figure>
+                    <figure class="imgCam02">
+                        <img src="<?php echo wp_get_attachment_image_url(60, 'full')?>" alt="">
+                    </figure>
+                    <figure class="imgCam03">
+                    <img src="<?php echo wp_get_attachment_image_url(63, 'full')?>" alt="">
+                </figure>
+                    <div class="singleContent">
+                        <h3>Überwachungssysteme für Private Objekte</h3>
+                        <p>Schutzen Sie Ihr eigen Heim mit unsere Systemen</p>
+                    </div>
+                </div>
+                <img src="<?php echo wp_get_attachment_image_url( 65, 'full' )?>" alt="">
             </div>
-            <div class="slid slidContent">
-                <img src="<?php echo wp_get_attachment_image_url( 58, 'full' )?>" alt="">
+        </div>
+          <div class="slide">
+                <div class="slidContent">
+                    <div class="slidOff_Content">
+                        <figure class="imgCam01">
+                            <img src="<?php echo wp_get_attachment_image_url(61, 'full')?>" alt="">
+                        </figure>
+                        <figure class="imgCam02">
+                            <img src="<?php echo wp_get_attachment_image_url(60, 'full')?>" alt="">
+                        </figure>
+                        <figure class="imgCam03">
+                        <img src="<?php echo wp_get_attachment_image_url(63, 'full')?>" alt="">
+                        </figure>
+                        <div class="singleContent">
+                            <h3>Überwachungssysteme für Private Objekte</h3>
+                            <p>Schutzen Sie Ihr eigen Heim mit unsere Systemen</p>
+                        </div>
+                    </div>
+                    <img src="<?php echo wp_get_attachment_image_url( 64, 'full' )?>" alt="">
+                </div>
             </div>
-            <div class=" slid slidContent">
-                <img src="<?php echo wp_get_attachment_image_url( 59, 'full' )?>" alt="">
+            <div class="slide">
+                <div class="slid slidContent">
+                    <div class="slidOff_Content">
+                        <figure class="imgCam01">
+                            <img src="<?php echo wp_get_attachment_image_url(61, 'full')?>" alt="">
+                        </figure>
+                        <figure class="imgCam02">
+                            <img src="<?php echo wp_get_attachment_image_url(60, 'full')?>" alt="">
+                        </figure>
+                        <figure class="imgCam03">
+                        <img src="<?php echo wp_get_attachment_image_url(63, 'full')?>" alt="">
+                        </figure>
+                        <div class="singleContent">
+                            <h3>Überwachungssysteme für Private Objekte</h3>
+                            <p>Schutzen Sie Ihr eigen Heim mit unsere Systemen</p>
+                        </div>
+                    </div>
+                    <img src="<?php echo wp_get_attachment_image_url( 65, 'full' )?>" alt="">
+                </div>
             </div>
-            <!--Automatische Slider -->
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-            <!--Slider Manuell -->
-            <div class="navigation-manuell">
-                <label for="radio1" class="manuell-btn"></label>
-                <label for="radio2" class="manuell-btn"></label>
-                <label for="radio3" class="manuell-btn"></label>
-                <label for="radio4" class="manuell-btn"></label>
-            </div>
-        </article>
-    </section>
+          <!-- Weitere Folien hier einfügen -->
+        </div>
+        <button class="prev">Zurück</button>
+        <button class="next">Weiter</button>
+      </div>
     </header>
     <div class="cl_polyDreieck" >
     <svg xmlns="http://www.w3.org/2000/svg" width="1955" height="70.783" viewBox="0 0 1955 70.783">

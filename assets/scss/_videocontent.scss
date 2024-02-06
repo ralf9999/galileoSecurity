@@ -1,0 +1,57 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+/*------------ erkennung Wrapper -----------
+####################################*/
+.cl_erkennung-wrapper_hp{
+height: 82rem;
+}
+/*------- Background img ------------------
+###################################*/
+.cl_erkennungBox_hp{
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 76rem;
+    background-image: url('../img/sensor_bild_video.jpg');
+    background-position: 40% center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    overflow: hidden;
+}
+.cl_erkennungscontent_hp{
+    width: 38rem;
+    height: 100%;
+    background-color: clr.$clr_backgroundSliderContent;
+    color: clr.$clr_textColorDark;
+    padding: 2rem ;
+}
+/*------------ Video Wrapper -----------
+####################################*/
+.cl_video_wrapper_hp{
+    width: 100%;
+}
+.cl_videogridbox_hp{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 25% 1fr;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-areas:
+    "video01 video01 videocontent"
+    "video01 video01 videocontent"
+    "video02 video02 video02"
+    ;
+}
+.cl_video-container01_hp{grid-area: video02;}
+.cl_video-container02_hp{grid-area: video01;}
+.cl_videoContent_hp{grid-area: videocontent;}
+
+.cl_video-container01_hp{
+    width: 100%;
+    height: auto;
+}
+.cl_video-container02_hp{
+    width: 100%;
+    height: auto;
+}

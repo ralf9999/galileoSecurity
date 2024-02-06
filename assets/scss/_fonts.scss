@@ -1,7 +1,28 @@
-body {
-    font-family: 'Roboto';
-    font-size: 10px;
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa-Light.woff2') format('woff2'),
+            url('../fonts/Comfortaa-Light.woff') format('woff');
     font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa-SemiBold.woff2') format('woff2'),
+         url('../fonts/Comfortaa-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+$fts_familyCom:'Comfortaa','sans-serif';
+$fts_font_weightLight:300;
+$fts_font_weightMedium:600;
+$fts_font_sizeH1480:4.2rem;
+$fts_font_sizeh2_800:3.6rem;
+$fts_font_sizeh4_800:2.1rem;
+$fts_font_sizeH1_height480:4.2rem;
+body {
+    font-family: $fts_familyCom;
+    font-size: 10px;
+    font-weight: $fts_font_weightLight;
 }
 
 * {
@@ -12,38 +33,43 @@ body {
 }
 
 h1 {
+    font-family: $fts_familyCom;
     font-size: 5.5rem;
     font-weight: 300;
     line-height: 5.9rem;
 }
 
 h2 {
-    font-size: 4.8rem;
-    font-weight: 300;
-    line-height: 5.4rem;
-}
-h3 {
-    font-size: 3.6rem;
-    font-weight: 300;
-    line-height: 4.2rem;
-}
-h4 {
+    font-family: $fts_familyCom;
     font-size: 3.2rem;
     font-weight: 300;
-    line-height: 3.8rem;
+    line-height: 4rem;
 }
-h5 {
+h3 {
+    font-family: $fts_familyCom;
     font-size: 2.4rem;
-    font-weight: 300;
-    line-height: 3rem;
+    font-weight: $fts_font_weightLight;
+    line-height: 3.2rem;
 }
-h6,p,li,a,span,button,input,label {
+h4 {
+    font-family: $fts_familyCom;
     font-size: 2rem;
     font-weight: 300;
-    line-height: 2.2rem;
+    line-height: 2.4rem;
+}
+h5 {
+    font-family: $fts_familyCom;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+}
+h6,p,li,a,span,button,input,label {
+    font-family: $fts_familyCom;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2rem;
 }
 p{
-    line-height: 2.2rem;
     word-spacing: 0.1rem;
     letter-spacing: 0;
     hyphens: auto;
@@ -54,6 +80,9 @@ p{
 .cl_subline{
     text-transform: uppercase;
     font-weight: 300;
+    padding: 0.4rem;
+    display: inline-block;
+    margin: 1rem 0 0 0;
 }
 .cl_h5Abstand{
     display: inline-block;
@@ -62,10 +91,4 @@ p{
 }
 .cl_extrazeilenAbstand{
     line-height: 2.8rem;
-}
-.cl_ohneTrennung{
-    hyphens: none;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
 }
