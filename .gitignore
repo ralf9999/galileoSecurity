@@ -31,7 +31,6 @@ wp-config.php
 
 # Log files
 *.log
-
 # htaccess
 /.htaccess
 # node_modules
@@ -41,6 +40,8 @@ package.json
 package-lock.json
 # DS Store 
 .DS_Store
+# html test
+view-html
 # All plugins
 #
 # Note: If you wish to whitelist plugins,
