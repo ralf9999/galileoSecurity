@@ -61,7 +61,7 @@ body {
 
 h1 {
   font-family: "Comfortaa", "sans-serif";
-  font-size: 5.5rem;
+  font-size: clamp(2.2rem, -2rem + 9.375vw, 5.5rem);
   font-weight: 300;
   line-height: 5.9rem;
 }
@@ -96,9 +96,9 @@ h5 {
 
 h6, p, li, a, span, button, input, label {
   font-family: "Comfortaa", "sans-serif";
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   font-weight: 300;
-  line-height: 2rem;
+  line-height: 2.6rem;
 }
 
 p {
@@ -207,6 +207,11 @@ input:focus, textarea:focus, select:focus {
   margin: 7rem auto 10rem auto;
 }
 
+.cl_wrapperMarginUpDown150 {
+  display: block;
+  margin: 15rem auto;
+}
+
 .cl_informationsText {
   width: 100%;
 }
@@ -280,7 +285,7 @@ input:focus, textarea:focus, select:focus {
 .cl_underline-center_hp, .cl_underline-left_hp {
   width: 20vw;
   display: block;
-  background-color: #8E0404;
+  background-color: #0452ac;
 }
 
 .cl_underline-left_hp {
@@ -291,9 +296,30 @@ input:focus, textarea:focus, select:focus {
   margin: 0 auto 1.2rem auto;
 }
 
+.borderRadius10 {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cl_keinVersteckteKosten_hp {
+  fill: #0452ac;
+}
+
+.cl_borderRadius_10_hp {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
 /*----------- Media Queries ---------
 #######################################*/
-@media screen and (max-width: 1690px) {
+@media screen and (max-width: 991px) {
   .cl_boxingArea {
     position: relative;
     width: 100%;
@@ -328,6 +354,15 @@ input:focus, textarea:focus, select:focus {
   object-fit: cover;
 }
 
+.cl_navBox li.cl_mietangebot_hp {
+  background-color: #0452ac;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+}
+.cl_navBox li.cl_mietangebot_hp a {
+  color: #eeeeee !important;
+}
+
 .cl_areaNavBox {
   width: fit-content;
   display: flex;
@@ -339,6 +374,7 @@ input:focus, textarea:focus, select:focus {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
 }
 .cl_areaNavBox .cl_navBox li {
@@ -369,9 +405,8 @@ input:focus, textarea:focus, select:focus {
   color: #eeeeee;
   text-decoration: none;
   font-size: 2rem;
-  text-transform: uppercase;
 }
-.cl_areaNavBox .cl_navBox li a:hover {
+text-transform:lowercase .cl_areaNavBox .cl_navBox li a:hover {
   color: #999999;
 }
 
@@ -466,7 +501,7 @@ input:focus, textarea:focus, select:focus {
   z-index: 9998;
   top: 0;
   box-shadow: 0px 4px 9.8px rgba(0, 0, 0, 0.072), 0px 4px 14.5px rgba(0, 0, 0, 0.087), 0px 4px 80px rgba(0, 0, 0, 0.11);
-  background-color: #8E0404;
+  background-color: #0452ac;
   overflow: hidden;
 }
 
@@ -495,13 +530,34 @@ input:focus, textarea:focus, select:focus {
 
 /*-----------Header_wrapper------------
 #######################################-*/
-.cl_header_wrapper_hp {
+.cl_headerWrapper {
   width: 100%;
   height: 65rem;
   margin: 0;
   position: relative;
   left: 0;
   top: 0;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  overflow: hidden;
+}
+.cl_headerWrapper h1 {
+  color: #eeeeee;
+}
+
+.cl_subtitle_hp {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cl_headerSlider_hp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
 }
 
 .cl_header-bg_hp {
@@ -512,7 +568,7 @@ input:focus, textarea:focus, select:focus {
   width: 100%;
   height: max-content;
   object-fit: cover;
-  object-position: center;
+  object-position: center -20rem;
 }
 
 /*------- header Content ---------
@@ -533,6 +589,13 @@ input:focus, textarea:focus, select:focus {
   color: #eeeeee;
 }
 
+.cl_MatheErgebnis_hp {
+  width: 35rem;
+  border: 1px solid #ddd;
+  padding: 0.8rem 2.4rem;
+  margin-bottom: 1rem;
+}
+
 /*----------- media Query -----------
 ######################################*/
 @media screen and (max-width: 526px) {
@@ -541,7 +604,6 @@ input:focus, textarea:focus, select:focus {
     padding: 3rem 1rem;
   }
   .cl_header-content_hp h1 {
-    font-size: 4.2rem;
     line-height: 4.2rem;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -581,6 +643,146 @@ input:focus, textarea:focus, select:focus {
     display: none;
   }
 }
+/* Kontaktbox links Fixed*/
+.cl_contactFixBox_hp {
+  position: fixed;
+  top: 50%;
+  right: -2px;
+  z-index: 99;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 7rem;
+  height: max-content;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cl_mailContact_hp,
+.cl_phoneContact_hp {
+  background-color: #fff;
+  border: 0.4rem solid #0452ac;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 100%;
+  padding: 1rem 1.3rem;
+  cursor: pointer;
+}
+
+.cl_phoneContact_hp {
+  display: block;
+  margin: -0.4rem 0 0 0;
+}
+
+.cl_phoneActive_hp {
+  display: block;
+  position: relative;
+  padding: 3rem 2rem 1rem 2rem;
+  background-color: #fff;
+  border: 0.4rem solid #0452ac;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  color: #0452ac;
+  cursor: pointer;
+  width: fit-content;
+}
+.cl_phoneActive_hp a {
+  text-decoration: none;
+  color: #0452ac;
+  font-size: 4.5rem;
+  cursor: pointer;
+}
+.cl_phoneActive_hp .cl_kreuzClose_hp {
+  font-size: 2rem;
+  font-weight: 900;
+  position: absolute;
+  top: -2.5rem;
+  right: -2.5rem;
+  border: 4px solid #0452ac;
+  background-color: #fff;
+  color: #0452ac;
+  padding: 1rem 1.4rem 0.8rem 1.4rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.cl_blurbg_hp {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(44, 44, 44, 0.501);
+  filter: blur(1);
+  position: fixed;
+  -webkit-filter: blur(0.3);
+  left: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.cl_active_hp {
+  display: flex;
+  font-size: 2.4rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* Kontaktbox links Fixed*/
+  .cl_contactFixBox_hp {
+    position: fixed;
+    bottom: -3.6rem;
+    right: 0;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: unset;
+  }
+  .cl_phoneContact_hp {
+    display: block;
+    margin: 0;
+  }
+  .cl_mailContact_hp,
+  .cl_phoneContact_hp {
+    background-color: #fff;
+    border: 0.2rem solid #0452ac;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 50%;
+    padding: 1rem 1rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cl_mailContact_hp img,
+  .cl_phoneContact_hp img {
+    height: 4rem;
+  }
+  .cl_phoneActive_hp {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  .cl_phoneActive_hp a {
+    font-size: 2.5rem;
+  }
+  .cl_active_hp {
+    font-size: 2.4rem;
+  }
+}
 /*Burger Button--------
 ############################*/
 div.cl_hp_burger_button {
@@ -588,7 +790,7 @@ div.cl_hp_burger_button {
   overflow: hidden;
   height: 65px;
   width: 65px;
-  background-color: #8E0404;
+  background-color: #0452ac;
   box-shadow: 0px 4px 9.8px rgba(0, 0, 0, 0.072), 0px 4px 14.5px rgba(0, 0, 0, 0.087), 0px 4px 80px rgba(0, 0, 0, 0.11);
   border-radius: 1rem;
   position: fixed;
@@ -649,7 +851,6 @@ div.cl_hp_burger_button {
 .cl_welcome-wrapper_hp {
   display: flex;
   justify-content: center;
-  margin: 8rem auto;
 }
 
 .cl_welcome-content_hp {
@@ -676,9 +877,7 @@ div.cl_hp_burger_button {
 /*--------- Grid Box -----------
 ###################################*/
 .cl_img_ueberwachung-wrapper_hp {
-  width: 100%;
   display: block;
-  margin: 0 auto;
   padding: 2rem 3%;
 }
 
@@ -686,9 +885,9 @@ div.cl_hp_burger_button {
   display: grid;
   width: 90%;
   margin: 0 auto;
-  grid-template-columns: 24% 24% 24% 24%;
-  grid-template-rows: max-content max-content max-content max-content;
-  grid-template-areas: "images01 images01 contentWach contentWach " "images01 images01 contentWach contentWach" ". images02 images02 ." ". images02 images02 .";
+  grid-template-columns: 48% 48%;
+  grid-template-rows: max-content max-content;
+  grid-template-areas: "contentWach images01" "contentWach images01";
 }
 
 .cl_content_img_hp {
@@ -699,14 +898,10 @@ div.cl_hp_burger_button {
   grid-area: images01;
 }
 
-.cl_imgBox02_hp {
-  grid-area: images02;
-}
-
 /*--------- Images Place -----------
 ###################################*/
 .cl_img01_hp {
-  width: 40rem;
+  width: 50%;
   max-width: 40rem;
   height: fit-content;
   object-fit: contain;
@@ -722,6 +917,9 @@ div.cl_hp_burger_button {
   justify-content: flex-end;
   margin: 0 0 0 0;
 }
+.cl_imgBox_hp img {
+  object-fit: cover;
+}
 
 .cl_imgBox02_hp {
   width: 100%;
@@ -729,12 +927,16 @@ div.cl_hp_burger_button {
   justify-content: center;
   margin: -26rem 0 0 8rem;
 }
+.cl_imgBox02_hp img {
+  object-fit: cover;
+}
 
 /*--------- Content Place -----------
 ###################################*/
 .cl_content_img_hp {
+  width: 50%;
   display: block;
-  margin: 6rem 0 0 2rem;
+  margin: 6rem 0 0 4rem;
 }
 
 /*--------- Media Queries -----------
@@ -773,69 +975,277 @@ div.cl_hp_burger_button {
   ###################################*/
   .cl_content_img_hp {
     display: block;
-    margin: 0;
+    margin: 3rem auto;
     text-align: center;
   }
   .cl_underline-left_hp {
     margin: 0 auto 1.2rem auto;
   }
 }
-.cl_wrapperDienstleistung {
+.cl_serviceWrapper_hp {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.cl_serviceWrapper_hp .cl_boxingArea {
+  margin-top: 0;
+}
+
+.cl_polyDreieckService_hp {
+  display: block;
+  margin-bottom: -0.3rem;
+}
+.cl_polyDreieckService_hp .cl_dreieckColor_hp {
+  fill: rgba(216, 234, 255, 0.3098039216);
+  display: block;
+}
+
+.cl_serviceBox {
+  width: 100%;
+  height: fit-content;
+  padding: 2rem;
+  background-color: rgba(216, 234, 255, 0.3098039216);
+  color: #666666;
+  margin: -0.3rem 0 0 0;
+}
+
+.cl_servicebild_hp {
+  display: block;
+  margin: 5rem 0 5rem 0;
   width: 100%;
 }
 
-.flexboxDreier {
+.cl_mietproduktWrapper_hp h2 {
+  text-align: center;
+  margin: 20rem auto 4rem auto;
+}
+
+.cl_mietproduktBox_hp {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  width: 80%;
-  margin: 12rem auto;
+  gap: 1rem;
+  margin: 0 0 20rem 0;
 }
 
-.flex {
+.cl_mietproduktimg_hp {
+  width: 48%;
   min-width: 32rem;
-  width: 33.33%;
-  max-width: 38rem;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
-.flex .cl_imageLeistung {
-  margin: 0;
-  width: 100%;
-  aspect-ratio: 1/0.5;
-  height: 250px;
-}
-.flex .cl_imageLeistung img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.cl_mietproduktimg_hp img {
+  height: 52vh;
 }
 
-.cl_privat .cl_contentLeistung, .cl_business .cl_contentLeistung, .cl_service .cl_contentLeistung {
+.cl_produktsContent_hp {
+  width: 48%;
+  min-width: 32rem;
+}
+.cl_produktsContent_hp h4 {
+  font-size: 2.6rem;
+  padding: 0 0 1rem;
+}
+.cl_produktsContent_hp p {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  word-spacing: 0.6rem;
+}
+.cl_produktsContent_hp button {
+  display: block;
+  margin: 3rem 0 0 0;
+  font-size: 3.2rem;
+  line-height: 1;
+  background-color: #023d81;
+  color: #eeeeee;
+  padding: 2rem 3.4rem;
+  border-style: none;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.cl_mietangebotWrapper {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  margin: 2rem 0 0 0;
-  overflow: hidden;
-  padding: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.cl_privat .cl_contentLeistung h3, .cl_business .cl_contentLeistung h3, .cl_service .cl_contentLeistung h3 {
+.cl_mietangebotWrapper .cl_mietangebotImg {
+  width: 30rem;
+}
+
+.cl_formBox_hp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+.cl_formBox_hp label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.cl_mietangebotContent {
+  margin: 2rem auto;
+}
+.cl_mietangebotContent h2 {
   display: inline-block;
   margin: 0 0 1rem 0;
 }
-.cl_privat .cl_contentLeistung h5, .cl_business .cl_contentLeistung h5, .cl_service .cl_contentLeistung h5 {
-  display: inline-block;
-  margin: 0 0 3rem 0;
+
+.cl_inputTextfield_mietangebot {
+  padding: 0.6rem 0.4rem;
+  width: 100%;
+  border: 2px solid #0452ac;
 }
 
-/*----Media Query Max 840px----
-        ##############################--*/
-@media screen and (max-width: 840px) {
-  .flexboxDreier {
-    width: 96%;
-  }
+.cl_submitButton_hp {
+  width: fit-content;
+  padding: 1rem 3rem;
+  background-color: #0452ac;
+  color: #eeeeee;
 }
+
+/*----------- Kontaktformular ----------
+#########################################-*/
+.cl_kontaktformWrapper_hp {
+  position: relative;
+  padding: 8rem 0;
+}
+.cl_kontaktformWrapper_hp .cl_logoBG_hp {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0.1;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.cl_kontaktformBox_hp .cl_formBox_hp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+.cl_kontaktformBox_hp .cl_formBox_hp label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.cl_textfeld01_hp {
+  padding: 0.6rem 0.4rem;
+  width: 100%;
+  border: 2px solid #0452ac;
+}
+
+.cl_nachrichtbox_hp {
+  display: flex;
+  flex-direction: column;
+}
+
+.wpcf7-textarea {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  width: 100%;
+  border: 2px solid #0452ac;
+}
+
+.cl_submitButton_hp {
+  width: fit-content;
+  padding: 1rem 3rem;
+  background-color: #0452ac;
+  color: #eeeeee;
+}
+
+.cl_serviceArea_hp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8rem;
+  justify-content: center;
+  margin: 8rem auto;
+}
+
+.cl_serviceBoxContent_hp {
+  width: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cl_serviceBoxContent_hp h4 {
+  font-weight: 700;
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+.cl_serviceContent02_hp {
+  width: min(1260px, 70%);
+  display: block;
+  margin: 0 auto 20rem;
+}
+
+.cl_polyDreieckService_hp02 {
+  width: 100vw;
+  margin-top: -4px;
+  display: block;
+  transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+}
+.cl_polyDreieckService_hp02 svg {
+  width: 100vw;
+  fill: rgba(216, 234, 255, 0.3098039216);
+}
+
+.cl_serviceListe_hp {
+  height: fit-content;
+  background-color: rgba(216, 234, 255, 0.3098039216);
+  padding: 10rem 0 0 0;
+}
+
+/*------- DreieckLinksneu ----------
+####################################*/
+.cl_dreieckLinks_hp {
+  display: block;
+}
+.cl_dreieckLinks_hp .cl_dreieckfarbe_hp {
+  fill: rgba(216, 234, 255, 0.3098039216);
+}
+
+.cl_dreieckRechts_hp {
+  display: block;
+  transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  -moz-transform: scale(-1, -1);
+  -ms-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+}
+.cl_dreieckRechts_hp .cl_dreieckfarbe_hp {
+  fill: rgba(216, 234, 255, 0.3098039216);
+}
+
+/*--------- Icon groessen ----------*/
+.cl_svg_time724_hp, .cl_svg_kosten_hp {
+  display: block;
+  width: 14rem;
+}
+
 /*------------ erkennung Wrapper -----------
 ####################################*/
 .cl_erkennung-wrapper_hp {
@@ -863,19 +1273,30 @@ div.cl_hp_burger_button {
   background-color: rgba(0, 0, 0, 0.5);
   color: #eeeeee;
   padding: 2rem;
+  overflow: hidden;
+}
+.cl_erkennungscontent_hp h2 {
+  display: block;
+  margin: 2rem 0 0 0;
+}
+.cl_erkennungscontent_hp .cl_underline-left_hp {
+  display: block;
+  margin: 0 2rem 2rem 0;
+  width: 60%;
 }
 
 /*------------ Video Wrapper -----------
 ####################################*/
 .cl_video_wrapper_hp {
-  width: 100%;
+  margin: 20rem auto;
 }
 
 .cl_videogridbox_hp {
   width: 80%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 25% 1fr;
+  gap: 2rem 4rem;
+  grid-template-columns: 25% 25% 1fr;
   grid-template-rows: max-content max-content max-content;
   grid-template-areas: "video01 video01 videocontent" "video01 video01 videocontent" "video02 video02 video02";
 }
@@ -894,22 +1315,86 @@ div.cl_hp_burger_button {
 
 .cl_video-container01_hp {
   width: 100%;
-  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 .cl_video-container02_hp {
   width: 100%;
-  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
+.cl_video-01_hp {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cl_video-02_hp {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-width: 76.8rem) {
+  .cl_videogridbox_hp {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem 4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content max-content;
+    grid-template-areas: "videocontent" "video01" "video02";
+  }
+  .cl_videoContent_hp {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cl_videoContent_hp .cl_underline-left_hp {
+    margin: 0 auto;
+  }
+  .cl_video-container02_hp {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .cl_video-01_hp {
+    width: 100%;
+    object-fit: cover;
+  }
+  .cl_video-02_hp {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .cl_video-container01_hp {
+    width: 96%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+}
 /*------footer SubWrapper--------------*/
 .cl_footerDown_hp {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #666666;
+  background-color: #023d81;
   padding: 1rem;
+  width: 100%;
 }
 
 .cl_footerCopyright_hp p {
@@ -941,6 +1426,141 @@ div.cl_hp_burger_button {
 .test01 .test {
   position: absolute;
   z-index: 5;
+}
+
+/*------ Footer up Content -----------
+######################################*/
+.cl_footerWrapper_hp {
+  background-color: #0452ac;
+  width: 100%;
+  height: fit-content;
+  padding: 2rem 1rem;
+  color: #eeeeee;
+}
+
+.cl_footerdreierFlexbox_hp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  justify-content: flex-start;
+}
+.cl_footerdreierFlexbox_hp .cl_footer01 {
+  width: 33%;
+}
+.cl_footerdreierFlexbox_hp .cl_footer01 img {
+  width: 22rem;
+}
+.cl_footerdreierFlexbox_hp .cl_footer01 h4 {
+  padding: 0 0 0 1rem;
+}
+.cl_footerdreierFlexbox_hp .cl_footer02,
+.cl_footerdreierFlexbox_hp .cl_footer03 {
+  width: 33%;
+  padding: 1rem 0 0 0;
+}
+.cl_footerdreierFlexbox_hp .cl_footer02 h4,
+.cl_footerdreierFlexbox_hp .cl_footer03 h4 {
+  padding: 0 0 1rem 0;
+  line-height: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .cl_footerdreierFlexbox_hp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    justify-content: center;
+    margin: 0 auto 7rem auto;
+    text-align: center;
+  }
+  .cl_footerdreierFlexbox_hp .cl_footer01 {
+    width: 33%;
+    min-width: 32rem;
+  }
+  .cl_footerdreierFlexbox_hp .cl_footer01 img {
+    width: 22rem;
+  }
+  .cl_footerdreierFlexbox_hp .cl_footer01 h4 {
+    padding: 0 0 0 1rem;
+  }
+  .cl_footerdreierFlexbox_hp .cl_footer02,
+  .cl_footerdreierFlexbox_hp .cl_footer03 {
+    width: 33%;
+    min-width: 32rem;
+    padding: 1rem 0 0 0;
+  }
+  .cl_footerdreierFlexbox_hp .cl_footer02 h4,
+  .cl_footerdreierFlexbox_hp .cl_footer03 h4 {
+    padding: 0 0 1rem 0;
+    line-height: 3rem;
+  }
+  /*---------- Footer Down Area ---------
+  #######################################-*/
+  .cl_footerCopyright_hp {
+    width: 50%;
+  }
+  .cl_footerSecondBox {
+    width: 50%;
+    gap: 0 2rem;
+    flex-wrap: nowrap;
+  }
+  .cl_footerSecondBox li {
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cl_footerDown_hp {
+    margin: 0 0 7rem 0;
+  }
+}
+@media screen and (max-width: 658px) {
+  .cl_footerdreierFlexbox_hp .cl_footer01 img {
+    width: 22rem;
+  }
+  .cl_footerdreierFlexbox_hp .cl_footer01 h4 {
+    padding: 0;
+    text-align: center;
+  }
+  .cl_footerdreierFlexbox_hp .cl_footer02,
+  .cl_footerdreierFlexbox_hp .cl_footer03 {
+    width: 33%;
+    min-width: 32rem;
+    padding: 1rem 0 0 0;
+  }
+  .cl_footerdreierFlexbox_hp .cl_footer02 h4,
+  .cl_footerdreierFlexbox_hp .cl_footer03 h4 {
+    padding: 0 0 1rem 0;
+    line-height: 3rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 567px) {
+  /*---------- Footer Down Area ---------
+  #######################################-*/
+  .cl_footerSecondNavBox_hp {
+    display: block;
+    margin: 0 auto;
+  }
+  .cl_footerSecondNavBox_hp .cl_footerSecondBox {
+    padding-inline-start: 0;
+  }
+  .cl_footerCopyright_hp {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .cl_footerSecondBox {
+    width: 100%;
+    gap: 0 2rem;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .cl_footerSecondBox li {
+    width: fit-content;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

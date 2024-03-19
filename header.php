@@ -35,12 +35,6 @@
             </svg>
         </button>
     <header class="cl_headerBox">
-    <div class="cl_logoText">
-            <a href="<?= $url; ?>">
-                <h2>D & A</h2>
-                <p>Boxpromotion</p>
-            </a>
-        </div>
         <div id="id_menuareaSecond_hp" class="cl_menuareaSecond_hp">
             <div class="cl_areaNavBox">
                 <?php wp_nav_menu( array(

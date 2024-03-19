@@ -1,32 +1,27 @@
 /*--------- Grid Box -----------
 ###################################*/
 .cl_img_ueberwachung-wrapper_hp{
-    width: 100%;
     display: block;
-    margin: 0 auto;
     padding: 2rem 3%;
 }
 .cl_contentGridbox_hp{
     display: grid;
     width: 90%;
     margin: 0 auto;
-    grid-template-columns: 24% 24% 24% 24%;
-    grid-template-rows: max-content max-content max-content max-content;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: max-content max-content;
     grid-template-areas:
-    "images01 images01 contentWach contentWach "
-    "images01 images01 contentWach contentWach"
-    ". images02 images02 ."
-    ". images02 images02 ."
+    "contentWach images01"
+    "contentWach images01"
     ;
 }
 .cl_content_img_hp{grid-area:contentWach;}
 .cl_imgBox_hp{grid-area: images01;}
-.cl_imgBox02_hp{grid-area: images02;}
 
 /*--------- Images Place -----------
 ###################################*/
 .cl_img01_hp{
-    width: 40rem;
+    width: 50%;
     max-width: 40rem;
     height: fit-content;
     object-fit: contain;
@@ -39,18 +34,25 @@
     display: flex;
     justify-content: flex-end;
     margin: 0 0 0 0;
+    img{
+        object-fit: cover;
+    }
 }
 .cl_imgBox02_hp{
     width: 100%;
     display:flex;
     justify-content: center;
     margin: -26rem 0 0 8rem;
+    img{
+        object-fit: cover;
+    }
 }
 /*--------- Content Place -----------
 ###################################*/
 .cl_content_img_hp{
+    width: 50%;
     display: block;
-    margin: 6rem 0 0 2rem;
+    margin: 6rem 0 0 4rem;
 }
 
 /*--------- Media Queries -----------
@@ -93,7 +95,7 @@
 ###################################*/
 .cl_content_img_hp{
     display: block;
-    margin: 0;
+    margin: 3rem auto;
     text-align: center;
 }
 .cl_underline-left_hp{

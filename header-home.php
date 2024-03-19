@@ -16,11 +16,24 @@ $attachment_id = 56;
 </head>
 
 <body>
+            <!-- Kontaktbox links
+    ###############################-->
+    <div class="cl_blurbg_hp">
+        <div class="cl_phoneActive_hp"><p class="cl_kreuzClose_hp">X</p><a href="tel:+4915127005762">+49 (0) 1512 7005762</a></div>
+    </div>
+    <div class="cl_contactFixBox_hp">
+        <div class="cl_mailContact_hp">
+            <a href="mailto:info@galileo-security.de" name="Galileo Security Service"><img src="http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/img/email.svg" alt=""></a>
+        </div>
+        <div class="cl_phoneContact_hp">
+            <img src="http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/img/phone-plus.svg" alt="">
+        </div>   
+    </div>
     <header class="cl_headerBox">
         <!-- mobile -->
     <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_menuarea_mobil_slid_hp cl_mobilNone">
             <div class="cl_logoTex cl_mobilLogo">
-                <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/Logo_galileo_neu_3_pfade.svg" alt="Galileo Security Technology">
+                <img src="<?= $url ?>/wp-content/uploads/2024/03/base_logo_transparent_background-white.svg" alt="Galileo Security Technology">
             </div>
             <div class="cl_areaNavBoxMobil">
                 <?php wp_nav_menu( array(
@@ -41,9 +54,8 @@ $attachment_id = 56;
             </svg>
         </div>
          <!-- desktop -->
-         <H1>Hallo Welt</H1>
         <div class="cl_logoText">
-            <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/Logo_galileo_neu_3_pfade.svg" alt="Galileo Security Technology">
+            <img src="<?= $url ?>/wp-content/uploads/2024/03/base_logo_transparent_background-white.svg" alt="Galileo Security Technology">
         </div>
         <div id="id_menuareaSecond_hp" class="cl_menuareaSecondHome_hp">
             <div class="cl_areaNavBox">
@@ -57,98 +69,12 @@ $attachment_id = 56;
 
             </div>
         </div>
-    <div class="slider-container">
-        <div class="slider">
-          <div class="slide">
-          <div class="slidContent">
-                <div class="slidOff_Content">
-                    <figure class="imgCam01">
-                        <img src="<?php echo wp_get_attachment_image_url(61, 'full')?>" alt="">
-                    </figure>
-                    <figure class="imgCam02">
-                        <img src="<?php echo wp_get_attachment_image_url(60, 'full')?>" alt="">
-                    </figure>
-                    <figure class="imgCam03">
-                    <img src="<?php echo wp_get_attachment_image_url(63, 'full')?>" alt="">
-                </figure>
-                    <div class="singleContent">
-                        <h3>Überwachungssysteme für Private Objekte</h3>
-                        <p>Schutzen Sie Ihr eigen Heim mit unsere Systemen</p>
-                    </div>
-                </div>
-                <img src="<?php echo wp_get_attachment_image_url( 66, 'full' )?>" alt="">
-            </div>
-          </div>
-          <div class="slide">
-            <div class="slidContent">
-            <div class="slidOff_Content">
-                    <figure class="imgCam01">
-                        <img src="<?php echo wp_get_attachment_image_url(61, 'full')?>" alt="">
-                    </figure>
-                    <figure class="imgCam02">
-                        <img src="<?php echo wp_get_attachment_image_url(60, 'full')?>" alt="">
-                    </figure>
-                    <figure class="imgCam03">
-                    <img src="<?php echo wp_get_attachment_image_url(63, 'full')?>" alt="">
-                </figure>
-                    <div class="singleContent">
-                        <h3>Überwachungssysteme für Private Objekte</h3>
-                        <p>Schutzen Sie Ihr eigen Heim mit unsere Systemen</p>
-                    </div>
-                </div>
-                <img src="<?php echo wp_get_attachment_image_url( 65, 'full' )?>" alt="">
-            </div>
-        </div>
-          <div class="slide">
-                <div class="slidContent">
-                    <div class="slidOff_Content">
-                        <figure class="imgCam01">
-                            <img src="<?php echo wp_get_attachment_image_url(61, 'full')?>" alt="">
-                        </figure>
-                        <figure class="imgCam02">
-                            <img src="<?php echo wp_get_attachment_image_url(60, 'full')?>" alt="">
-                        </figure>
-                        <figure class="imgCam03">
-                        <img src="<?php echo wp_get_attachment_image_url(63, 'full')?>" alt="">
-                        </figure>
-                        <div class="singleContent">
-                            <h3>Überwachungssysteme für Private Objekte</h3>
-                            <p>Schutzen Sie Ihr eigen Heim mit unsere Systemen</p>
-                        </div>
-                    </div>
-                    <img src="<?php echo wp_get_attachment_image_url( 64, 'full' )?>" alt="">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slid slidContent">
-                    <div class="slidOff_Content">
-                        <figure class="imgCam01">
-                            <img src="<?php echo wp_get_attachment_image_url(61, 'full')?>" alt="">
-                        </figure>
-                        <figure class="imgCam02">
-                            <img src="<?php echo wp_get_attachment_image_url(60, 'full')?>" alt="">
-                        </figure>
-                        <figure class="imgCam03">
-                        <img src="<?php echo wp_get_attachment_image_url(63, 'full')?>" alt="">
-                        </figure>
-                        <div class="singleContent">
-                            <h3>Überwachungssysteme für Private Objekte</h3>
-                            <p>Schutzen Sie Ihr eigen Heim mit unsere Systemen</p>
-                        </div>
-                    </div>
-                    <img src="<?php echo wp_get_attachment_image_url( 65, 'full' )?>" alt="">
-                </div>
-            </div>
-          <!-- Weitere Folien hier einfügen -->
-        </div>
-        <button class="prev">Zurück</button>
-        <button class="next">Weiter</button>
-      </div>
-    </header>
-    <div class="cl_polyDreieck" >
-    <svg xmlns="http://www.w3.org/2000/svg" width="1955" height="70.783" viewBox="0 0 1955 70.783">
-        <path id="Pfad_29" data-name="Pfad 29" d="M694.04,43.217,1955,114H0Z" transform="translate(0 -43.217)" fill="#fff"/>
-    </svg>
-    </div>
+        <section class="cl_headerWrapper">
+            <h1 class="cl_subtitle_hp"><?= get_the_title()?></h1>
+            <img class="cl_header-bg_hp" src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/ueberwachungCam-02.jpg" alt="Galileo Security Technology">
+      
+        </section>
 
+    </div>
+    </header>
     <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>

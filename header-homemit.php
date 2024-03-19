@@ -16,12 +16,26 @@ $attachment_id = 56;
 </head>
 
 <body>
+        <!-- Kontaktbox links
+    ###############################-->
+    <div class="cl_blurbg_hp">
+        <div class="cl_phoneActive_hp"><p class="cl_kreuzClose_hp">X</p><a href="tel:+4915127005762">+49 (0) 1512 7005762</a></div>
+    </div>
+    <div class="cl_contactFixBox_hp">
+        <div class="cl_mailContact_hp">
+            <a href="mailto:info@galileo-security.de" name="Galileo Security Service"><img src="http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/img/email.svg" alt=""></a>
+        </div>
+        <div class="cl_phoneContact_hp">
+            <img src="http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/img/phone-plus.svg" alt="">
+        </div>   
+    </div>
+    <!--#######################################-->
     <header class="cl_headerBox">
         <!-- mobile -->
         <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_menuarea_mobil_slid_hp cl_mobilNone">
             <div class="cl_logoTex cl_mobilLogo">
                 <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/base_logo_transparent_background-white.svg"
-                    alt="Galileo Security Technology">
+                    alt="Galileo Security">
             </div>
             <div class="cl_areaNavBoxMobil">
                 <?php wp_nav_menu(
@@ -61,13 +75,12 @@ $attachment_id = 56;
             </div>
         </div>
     </header>
-    <div class="cl_header_wrapper_hp">
-        <img class="cl_header-bg_hp"
-            src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/baustellenueberwachung-03.jpg"
-            alt="Baustellenüberwachung">
-        <div class="cl_header-content_hp">
-            <h1>Baustellenüberwachung</h1>
-            <h5>Sichern Sie Ihre Baustelle vor Diebstahl und Vandalismus ab!</h5>
+    <div class="cl_headerWrapper">
+        <div class="cl_headerSlider_hp"><?php echo do_shortcode('[smartslider3 slider="2"]');?>
+            <div class="cl_header-content_hp">
+                <h1>Baustellenüberwachung</h1>
+                <h5>Sichern Sie Ihre Baustelle vor Diebstahl und Vandalismus ab!</h5>
+            </div>
         </div>
     </div>
     <div class="cl_polyDreieck">

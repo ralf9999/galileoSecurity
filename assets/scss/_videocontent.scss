@@ -25,17 +25,30 @@ height: 82rem;
     background-color: clr.$clr_backgroundSliderContent;
     color: clr.$clr_textColorDark;
     padding: 2rem ;
+    overflow: hidden;
+    
+        h2 {
+            display: block;
+            margin: 2rem 0 0 0;
+        }
+    
+        .cl_underline-left_hp {
+            display: block;
+            margin: 0 2rem 2rem 0;
+            width: 60%;
+        }
 }
 /*------------ Video Wrapper -----------
 ####################################*/
 .cl_video_wrapper_hp{
-    width: 100%;
+margin: 20rem auto;
 }
 .cl_videogridbox_hp{
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 25% 1fr;
+    gap: 2rem 4rem;
+        grid-template-columns: 25% 25% 1fr;
     grid-template-rows: max-content max-content max-content;
     grid-template-areas:
     "video01 video01 videocontent"
@@ -49,9 +62,78 @@ height: 82rem;
 
 .cl_video-container01_hp{
     width: 100%;
-    height: auto;
+display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
 }
 .cl_video-container02_hp{
     width: 100%;
-    height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+    
+    .cl_video-01_hp {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .cl_video-02_hp {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+}
+@media (max-width:76.8rem) {
+    .cl_videogridbox_hp{
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        gap: 2rem 4rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content max-content;
+        grid-template-areas:
+        "videocontent"
+        "video01"
+        "video02"
+        ;
+    }
+    .cl_videoContent_hp{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        .cl_underline-left_hp{
+            margin: 0 auto;
+        }
+    }
+    .cl_video-container02_hp{
+        width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        
+        .cl_video-01_hp {
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .cl_video-02_hp {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+    }
+    .cl_video-container01_hp{
+        width: 96%;
+    display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+        margin: 0 auto;
+    }
 }

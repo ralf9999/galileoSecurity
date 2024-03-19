@@ -74,3 +74,17 @@
 //   }
 // nextButton.addEventListener('click', nextSlide);
 // prevButton.addEventListener('click', prevSlide);
+// const phonecontact = document.querySelector('.cl_phoneContact_hp');
+// const mailcontact = document.querySelector('.cl_mailContact_hp');
+// const phoneBoxKreuz = document.querySelector('.cl_kreuzClose_hp');
+
+// phonecontact.addEventListener("click", phoneOver )
+// function phoneOver (){
+// const phoneBox = document.querySelector('.cl_blurbg_hp');
+//     phoneBox.classList.add('cl_active_hp');
+// }
+// phoneBoxKreuz.addEventListener("click", phoneOut )
+// function phoneOut (){
+// const phoneBox = document.querySelector('.cl_blurbg_hp');
+//     phoneBox.classList.remove('cl_active_hp');
+// }

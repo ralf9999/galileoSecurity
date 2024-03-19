@@ -69,6 +69,9 @@ function hp_designThink_setup() {
 endif; // hp_designThink_setup
 
 add_action( 'after_setup_theme', 'hp_designThink_setup' );
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
 
 if ( ! function_exists( 'hp_designThink_init' ) ) :
@@ -128,6 +131,7 @@ function hp_designThink_custom_image_sizes_names( $sizes ) {
 add_action( 'image_size_names_choose', 'hp_designThink_custom_image_sizes_names' );
 endif;// hp_designThink_custom_image_sizes_names
 /*------------------------------*/
+
     // Our custom post type function
     //###########################################################
     function create_posttype() {

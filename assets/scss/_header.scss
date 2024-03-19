@@ -29,6 +29,16 @@
     object-fit: cover;
   }
 }
+.cl_navBox {
+li.cl_mietangebot_hp{
+  background-color:clr.$clr_backgrundPrimayColor;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+  a{
+  color:clr.$clr_textColorDark!important;
+  }
+}
+}
 .cl_areaNavBox {
   width: fit-content;
   display: flex;
@@ -39,6 +49,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
 
     li {
@@ -68,7 +79,7 @@
         color: clr.$clr_textColorDark;
         text-decoration: none;
         font-size: 2rem;
-        text-transform: uppercase;
+        text-transform:lowercase
         &:hover{
           color: clr.$clr_textcolorLightHover;
         }
@@ -136,6 +147,7 @@
     margin: 1rem 0;
   }
 }
+
 /*------------ Mobil Nav -----------
 ####################################*/
 
@@ -190,13 +202,34 @@ overflow: hidden;
 }
 /*-----------Header_wrapper------------
 #######################################-*/
-.cl_header_wrapper_hp{
+.cl_headerWrapper {
   width: 100%;
   height: 65rem;
   margin: 0;
   position: relative;
   left: 0;
   top: 0;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  overflow: hidden;
+  h1 {
+      color: clr.$clr_textColorDark;
+    }
+}
+.cl_subtitle_hp{
+position: relative;
+z-index: 10;
+padding: 2rem;
+background-color: clr.$clr_headerBarColor;
+}
+
+.cl_headerSlider_hp{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+
 }
 .cl_header-bg_hp{
   position: absolute;
@@ -206,7 +239,7 @@ overflow: hidden;
   width: 100%;
   height: max-content;
   object-fit: cover;
-  object-position: center;
+  object-position: center -20rem;
 
 }
 /*------- header Content ---------
@@ -226,14 +259,19 @@ overflow: hidden;
     color: clr.$clr_textColorDark;
   }
 }
+.cl_MatheErgebnis_hp{
+  width: 35rem;
+  border: 1px solid #ddd;
+  padding: 0.8rem 2.4rem;
+  margin-bottom: 1rem;
+}
 /*----------- media Query -----------
 ######################################*/
 @media screen and (max-width:526px) {
   .cl_header-content_hp{
     width: 100%;
     padding: 3rem 1rem;
-    h1{
-      font-size: fts.$fts_font_sizeH1480;
+    h1 {
       line-height: fts.$fts_font_sizeH1_height480;
       hyphens: auto;
       -webkit-hyphens: auto;

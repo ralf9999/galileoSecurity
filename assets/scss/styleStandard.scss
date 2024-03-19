@@ -1,8 +1,6 @@
 @forward 'color';
 @forward 'fonts';
 @forward 'standard';
-@forward 'headerSlider';
-@forward 'headerSliderContent';
 @forward 'importFontsServer';
 @use 'color' as clr;
 
@@ -75,7 +73,7 @@ span {
 .cl_primaryColor {
     width: 25rem;
     height: 25rem;
-    background-color: clr.$clr_primaryColor;
+    background-color: clr.$clr_primaryColorblue;
 }
 
 .cl_secondColor {
@@ -191,8 +189,8 @@ button:focus {
     .cl_btnEins {
         transition: all 300ms ease-in-out;
         background-color: transparent;
-        color: clr.$clr_primaryColor;
-        border: 1px solid clr.$clr_primaryColor;
+        color: clr.$clr_primaryColorblue;
+            border: 1px solid clr.$clr_primaryColorblue;
         -webkit-transition: all 300ms ease-in-out;
         -moz-transition: all 300ms ease-in-out;
         -ms-transition: all 300ms ease-in-out;
@@ -200,7 +198,7 @@ button:focus {
 
         &:hover,
         :focus {
-            background-color: clr.$clr_primaryColor;
+            background-color: clr.$clr_primaryColorblue;
             color: clr.$clr_backgroundSecondColor;
             box-shadow: clr.$clr_shadow-box;
         }
@@ -225,7 +223,7 @@ button:focus {
 
     .cl_btnDrei {
         transition: all 300ms ease-in-out;
-        color: clr.$clr_primaryColor;
+        color: clr.$clr_primaryColorblue;
         -webkit-transition: all 300ms ease-in-out;
         -moz-transition: all 300ms ease-in-out;
         -ms-transition: all 300ms ease-in-out;

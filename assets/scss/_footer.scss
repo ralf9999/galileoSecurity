@@ -1,39 +1,199 @@
 @use 'fonts' as fts;
 @use 'color' as clr;
+
 /*------footer SubWrapper--------------*/
 .cl_footerDown_hp {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: clr.$clr_backgrundDarkColor;
+    background-color: clr.$clr_backgrundDarkColorblue;
     padding: 1rem;
+    width: 100%;
 }
-.cl_footerCopyright_hp p{
-        color: clr.$clr_textColorDark;
-        font-size: 1.2rem;
+.cl_footerCopyright_hp p {
+    color: clr.$clr_textColorDark;
+    font-size: 1.2rem;
 }
-.cl_footerSecondBox{
+.cl_footerSecondBox {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
     list-style: none;
     padding-block-start: 0;
-    li a{
+li a {
         text-decoration: none;
         color: clr.$clr_textColorDark;
         font-size: 1.2rem;
     }
 }
-.test01{
+.test01 {
     position: absolute;
     z-index: 999;
     width: 400px;
     height: 400px;
-background-color: aliceblue;
-.test{
-    position: absolute;
-    z-index: 5;
+    background-color: aliceblue;
+.test {
+        position: absolute;
+        z-index: 5;
+    }
 }
+
+/*------ Footer up Content -----------
+######################################*/
+.cl_footerWrapper_hp {
+    background-color: clr.$clr_backgrundPrimayColor;
+    width: 100%;
+    height: fit-content;
+    padding: 2rem 1rem;
+    color: clr.$clr_textColorDark;
+}
+
+.cl_footerdreierFlexbox_hp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    justify-content: flex-start;
+
+    .cl_footer01 {
+        width: 33%;
+
+        img {
+            width: 22rem
+        }
+
+        h4 {
+            padding: 0 0 0 1rem;
+        }
+    }
+
+    .cl_footer02,
+    .cl_footer03 {
+        width: 33%;
+        padding: 1rem 0 0 0;
+
+        h4 {
+            padding: 0 0 1rem 0;
+            line-height: 3rem;
+        }
+    }
+}
+@media screen and (max-width:800px) {
+    .cl_footerdreierFlexbox_hp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: auto;
+        justify-content: center;
+        margin: 0 auto 7rem auto;
+        text-align: center;
+
+        .cl_footer01 {
+            width: 33%;
+            min-width: 32rem;
+
+            img {
+                width: 22rem
+            }
+
+            h4 {
+                padding: 0 0 0 1rem;
+            }
+        }
+
+        .cl_footer02,
+        .cl_footer03 {
+            width: 33%;
+            min-width: 32rem;
+            padding: 1rem 0 0 0;
+
+            h4 {
+                padding: 0 0 1rem 0;
+                line-height: 3rem;
+            }
+        }
+    }
+
+    /*---------- Footer Down Area ---------
+#######################################-*/
+
+    .cl_footerCopyright_hp {
+        width: 50%;
+    }
+
+    .cl_footerSecondBox {
+        width: 50%;
+        gap: 0 2rem;
+        flex-wrap: nowrap;
+
+        li {
+            width: fit-content;
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .cl_footerDown_hp {
+        margin: 0 0 7rem 0;
+    }
+}
+@media screen and (max-width:658px) {
+    .cl_footerdreierFlexbox_hp {
+
+        .cl_footer01 {
+
+            img {
+                width: 22rem
+            }
+
+            h4 {
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+        .cl_footer02,
+        .cl_footer03 {
+            width: 33%;
+            min-width: 32rem;
+            padding: 1rem 0 0 0;
+
+            h4 {
+                padding: 0 0 1rem 0;
+                line-height: 3rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:567px) {
+    /*---------- Footer Down Area ---------
+    #######################################-*/
+.cl_footerSecondNavBox_hp{
+    display: block;
+    margin: 0 auto;
+    .cl_footerSecondBox{
+        padding-inline-start: 0;
+    }
+    
+}
+    .cl_footerCopyright_hp {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .cl_footerSecondBox {
+        width: 100%;
+        gap: 0 2rem;
+        flex-wrap: nowrap;
+        text-align: center;
+        margin: 0 auto;
+
+        li {
+            width: fit-content;
+        }
+    }
 }

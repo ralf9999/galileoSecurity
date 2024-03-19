@@ -1,0 +1,47 @@
+//##########-Mietangebotsseite-#############
+
+@use 'fonts' as fts;
+@use 'color' as clr;
+
+.cl_mietangebotWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .cl_mietangebotImg{
+        width: 30rem;
+    }
+}
+.cl_formBox_hp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 0 1rem;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+}
+.cl_mietangebotContent{
+    margin: 2rem auto;
+    h2{
+        display: inline-block;
+        margin: 0 0 1rem 0;
+    }
+}
+.cl_inputTextfield_mietangebot {
+    padding: 0.6rem 0.4rem;
+    width: 100%;
+    border: 2px solid clr.$clr_primaryColorblue;
+}
+
+.cl_submitButton_hp {
+    width: fit-content;
+    padding: 1rem 3rem;
+    background-color: clr.$clr_primaryColorblue;
+    color: clr.$clr_textColorDark;
+}

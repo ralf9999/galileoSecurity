@@ -1,0 +1,61 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+
+.cl_mietproduktWrapper_hp {
+
+    h2 {
+        text-align: center;
+        margin: 20rem auto 4rem auto;
+    }
+}
+
+.cl_mietproduktBox_hp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 0 20rem 0;
+}
+
+.cl_mietproduktimg_hp {
+    width: 48%;
+    min-width: 32rem;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    img{
+        height: 52vh;
+    }
+}
+
+.cl_produktsContent_hp {
+    width: 48%;
+    min-width: 32rem;
+    h4 {
+        font-size: 2.6rem;
+        padding: 0 0 1rem;
+    }
+
+    p {
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        word-spacing: 0.6rem;
+    }
+
+    button {
+        display: block;
+        margin: 3rem 0 0 0;
+        font-size: 3.2rem;
+        line-height: 1;
+        background-color: clr.$clr_backgrundDarkColorblue;
+        color: clr.$clr_textColorDark;
+        padding: 2rem 3.4rem;
+        border-style: none;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+}
+}

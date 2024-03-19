@@ -5,7 +5,7 @@
             <?php
                     $footerUp_args = array(
                         'post_type' => 'post',
-                        'cat' => 2,// Kategorie der posts/Beiträge "footer"
+                        'cat' => 4,// Kategorie der posts/Beiträge "footer"
                         'posts_per_page' => 4,
                         'order' => 'ASC',
                         'orderby' => 'date'
