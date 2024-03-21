@@ -59,9 +59,7 @@ input:focus, textarea:focus, select:focus {
 .cl_boxingArea{
     position: relative;
     width: min(1260px, 70%);
-    margin: 5rem auto 8rem auto;
     padding: 0;
-
 }
 
 .cl_fullwide {
@@ -70,15 +68,35 @@ input:focus, textarea:focus, select:focus {
     margin: 0;
     padding: 0;
 }
+//## Margin Abstände ###
 .cl_wrapperMargin{
     margin: 7rem auto 10rem auto;
+}
+.cl_wrapperMargin50-80{
+    margin: 5rem auto 8rem auto;
+}
+.cl_wrapperMargin50-0{
+    margin: 5rem auto 0 auto;
 }
 .cl_wrapperMarginUpDown150{
     display: block;
     margin: 15rem auto;
 }
+.cl_wrapperMarginUpDown250-150{
+    display: block;
+    margin: 35rem auto 15rem auto;
+}
+
+//##############ende
 .cl_informationsText{
     width: 100%;
+}
+button {
+    cursor: pointer;
+}
+.cl_whatsappButton{
+    position: absolute;
+    z-index: 99999;
 }
 /*##############Ende#################*/
 /*-------------- Deko Dreieck ------

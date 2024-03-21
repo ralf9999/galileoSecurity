@@ -21,21 +21,21 @@ $attachment_id = 56;
     <div class="cl_blurbg_hp">
         <div class="cl_phoneActive_hp"><p class="cl_kreuzClose_hp">X</p><a href="tel:+4915127005762">+49 (0) 1512 7005762</a></div>
     </div>
-    <div class="cl_contactFixBox_hp">
         <div class="cl_mailContact_hp">
-            <a href="mailto:info@galileo-security.de" name="Galileo Security Service"><img src="http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/img/email.svg" alt=""></a>
+            <a href="mailto:info@galileo-security.de" name="Galileo Security Service"><img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/email.svg" alt=""><p>E-Mail</p></a>
         </div>
         <div class="cl_phoneContact_hp">
-            <img src="http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/img/phone-plus.svg" alt="">
+            <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/phone-plus.svg" alt=""><p>Telefon</p>
         </div>   
-    </div>
     <!--#######################################-->
     <header class="cl_headerBox">
         <!-- mobile -->
         <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_menuarea_mobil_slid_hp cl_mobilNone">
             <div class="cl_logoTex cl_mobilLogo">
+            <a href="<?= $url ?>">
                 <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/base_logo_transparent_background-white.svg"
                     alt="Galileo Security">
+            </a>
             </div>
             <div class="cl_areaNavBoxMobil">
                 <?php wp_nav_menu(
@@ -58,8 +58,10 @@ $attachment_id = 56;
         </div>
         <!-- desktop -->
         <div class="cl_logoText">
+        <a href="<?= $url ?>">
             <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/base_logo_transparent_background-white.svg"
                 alt="Galileo Security Technology">
+        </a>
         </div>
         <div id="id_menuareaSecond_hp" class="cl_menuareaSecondHome_hp">
             <div class="cl_areaNavBox">
@@ -74,6 +76,7 @@ $attachment_id = 56;
 
             </div>
         </div>
+        <div class="cl_whatsappButton"><?php echo do_shortcode('[njwa_button id="171"]');?></div>
     </header>
     <div class="cl_headerWrapper">
         <div class="cl_headerSlider_hp"><?php echo do_shortcode('[smartslider3 slider="2"]');?>
@@ -81,14 +84,13 @@ $attachment_id = 56;
                 <h1>Baustellenüberwachung</h1>
                 <h5>Sichern Sie Ihre Baustelle vor Diebstahl und Vandalismus ab!</h5>
             </div>
-        </div>
-    </div>
-    <div class="cl_polyDreieck">
+            <div class="cl_polyDreieck">
         <svg xmlns="http://www.w3.org/2000/svg" width="1955" height="70.783" viewBox="0 0 1955 70.783">
             <path id="Pfad_29" data-name="Pfad 29" d="M694.04,43.217,1955,114H0Z" transform="translate(0 -43.217)"
                 fill="#fff" />
         </svg>
     </div>
-
+        </div>
+    </div>
     <?php if (function_exists('wp_body_open'))
         wp_body_open(); ?>

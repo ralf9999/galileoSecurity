@@ -1,22 +1,20 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+
 /*--------- Grid Box -----------
 ###################################*/
 .cl_img_ueberwachung-wrapper_hp{
     display: block;
     padding: 2rem 3%;
+    background-color: clr.$clr_backgrundDarkColorblue;
+    margin-bottom: 0;
 }
-.cl_contentGridbox_hp{
-    display: grid;
-    width: 90%;
-    margin: 0 auto;
-    grid-template-columns: 48% 48%;
-    grid-template-rows: max-content max-content;
-    grid-template-areas:
-    "contentWach images01"
-    "contentWach images01"
-    ;
+.cl_contentFlexbox_hp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.cl_content_img_hp{grid-area:contentWach;}
-.cl_imgBox_hp{grid-area: images01;}
 
 /*--------- Images Place -----------
 ###################################*/
@@ -30,19 +28,23 @@
     align-items: end;
 }
 .cl_imgBox_hp{
-    width: 100%;
+    position: relative;
+    top: 14rem;
+    width: fit-content;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0 0 0 0;
+    gap: 2rem;
+    overflow: hidden;
     img{
         object-fit: cover;
     }
 }
 .cl_imgBox02_hp{
-    width: 100%;
+    width: fit-content;
     display:flex;
     justify-content: center;
-    margin: -26rem 0 0 8rem;
+    margin: 0rem 0 0 0;
     img{
         object-fit: cover;
     }
@@ -52,7 +54,10 @@
 .cl_content_img_hp{
     width: 50%;
     display: block;
-    margin: 6rem 0 0 4rem;
+    margin: 0rem 0 0 0rem;
+    overflow: hidden;
+    text-align: center;
+    color: clr.$clr_textColorDark;
 }
 
 /*--------- Media Queries -----------

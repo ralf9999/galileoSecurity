@@ -21,19 +21,20 @@ $attachment_id = 56;
     <div class="cl_blurbg_hp">
         <div class="cl_phoneActive_hp"><p class="cl_kreuzClose_hp">X</p><a href="tel:+4915127005762">+49 (0) 1512 7005762</a></div>
     </div>
-    <div class="cl_contactFixBox_hp">
         <div class="cl_mailContact_hp">
-            <a href="mailto:info@galileo-security.de" name="Galileo Security Service"><img src="http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/img/email.svg" alt=""></a>
+            <a href="mailto:info@galileo-security.de" name="Galileo Security Service"><img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/email.svg" alt=""><p>E-Mail</p></a>
         </div>
         <div class="cl_phoneContact_hp">
-            <img src="http://localhost:8888/WordPress-projekte/galileoSecurity/wp-content/themes/galileoSecurity/assets/img/phone-plus.svg" alt="">
+            <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/phone-plus.svg" alt=""><p>Telefon</p>
         </div>   
-    </div>
+    <!--#######################################-->
     <header class="cl_headerBox">
         <!-- mobile -->
     <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_menuarea_mobil_slid_hp cl_mobilNone">
             <div class="cl_logoTex cl_mobilLogo">
-                <img src="<?= $url ?>/wp-content/uploads/2024/03/base_logo_transparent_background-white.svg" alt="Galileo Security Technology">
+                <a href="<?= $url ?>">
+                    <img src="<?= $url ?>/wp-content/uploads/2024/03/base_logo_transparent_background-white.svg" alt="Galileo Security Technology">
+                </a>
             </div>
             <div class="cl_areaNavBoxMobil">
                 <?php wp_nav_menu( array(
@@ -55,7 +56,9 @@ $attachment_id = 56;
         </div>
          <!-- desktop -->
         <div class="cl_logoText">
+        <a href="<?= $url ?>">
             <img src="<?= $url ?>/wp-content/uploads/2024/03/base_logo_transparent_background-white.svg" alt="Galileo Security Technology">
+        </a>
         </div>
         <div id="id_menuareaSecond_hp" class="cl_menuareaSecondHome_hp">
             <div class="cl_areaNavBox">
@@ -75,6 +78,6 @@ $attachment_id = 56;
       
         </section>
 
-    </div>
+    </div> <div class="cl_whatsappButton"><?php echo do_shortcode('[njwa_button id="171"]');?></div>
     </header>
     <?php if( function_exists( 'wp_body_open' ) ) wp_body_open(); ?>
