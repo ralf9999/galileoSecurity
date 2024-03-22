@@ -6,14 +6,16 @@
 .cl_img_ueberwachung-wrapper_hp{
     display: block;
     padding: 2rem 3%;
-    background-color: clr.$clr_backgrundDarkColorblue;
+    background-color: clr.$clr_backgrundlightColor;
     margin-bottom: 0;
+    height: 65rem;
 }
 .cl_contentFlexbox_hp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /*--------- Images Place -----------
@@ -36,6 +38,9 @@
     margin: 0 0 0 0;
     gap: 2rem;
     overflow: hidden;
+    position: absolute;
+    top: 24rem;
+    z-index: 999;
     img{
         object-fit: cover;
     }
@@ -52,12 +57,14 @@
 /*--------- Content Place -----------
 ###################################*/
 .cl_content_img_hp{
+    position: absolute;
+    top: -50px;
     width: 50%;
     display: block;
     margin: 0rem 0 0 0rem;
     overflow: hidden;
     text-align: center;
-    color: clr.$clr_textColorDark;
+    color: clr.$clr_textColorlight;
 }
 
 /*--------- Media Queries -----------

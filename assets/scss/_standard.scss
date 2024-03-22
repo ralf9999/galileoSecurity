@@ -82,21 +82,33 @@ input:focus, textarea:focus, select:focus {
     display: block;
     margin: 15rem auto;
 }
-.cl_wrapperMarginUpDown250-150{
+.cl_wrapperMarginUpDown-0{
+    display: block;
+    margin: 0 auto;
+}
+.cl_wrapperMarginUpDown350{
+    display: block;
+    margin: 35rem auto;
+}
+.cl_wrapperMarginUpDown350-150{
     display: block;
     margin: 35rem auto 15rem auto;
 }
-
-//##############ende
-.cl_informationsText{
-    width: 100%;
+.cl_wrapperMarginUpDown650-350{
+    display: block;
+    margin: 65rem auto 35rem auto;
 }
+//##############ende
 button {
     cursor: pointer;
 }
 .cl_whatsappButton{
     position: absolute;
     z-index: 99999;
+}
+//########## Zustimmung #########
+.cl_stimmungButton{
+    font-size: 1.1rem;
 }
 /*##############Ende#################*/
 /*-------------- Deko Dreieck ------
@@ -180,7 +192,13 @@ background-color: clr.$clr_primaryColorblue;
     -o-border-radius: 1rem;
     box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.50);
 }
-
+.borderRadius10Without {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
 .cl_keinVersteckteKosten_hp {
     fill: clr.$clr_primaryColorblue;
 }

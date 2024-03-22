@@ -84,12 +84,7 @@ $attachment_id = 56;
                 <h1>Baustellenüberwachung</h1>
                 <h5>Sichern Sie Ihre Baustelle vor Diebstahl und Vandalismus ab!</h5>
             </div>
-            <div class="cl_polyDreieck">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1955" height="70.783" viewBox="0 0 1955 70.783">
-            <path id="Pfad_29" data-name="Pfad 29" d="M694.04,43.217,1955,114H0Z" transform="translate(0 -43.217)"
-                fill="#fff" />
-        </svg>
-    </div>
+
         </div>
     </div>
     <?php if (function_exists('wp_body_open'))

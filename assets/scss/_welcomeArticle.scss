@@ -14,6 +14,16 @@
         width: 60rem;
     }
 }
+.cl_informationsText {
+    h6,p,li,a,span,button,input,label{
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+    h4, h6{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
 /*----------- Media Queries ---------
 #######################################*/
 @media screen and (max-width:800px) {
