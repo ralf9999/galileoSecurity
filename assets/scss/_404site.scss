@@ -1,0 +1,17 @@
+//####---404----#####//
+.cl_404Area{
+    padding: 8rem 0 0 0;
+    .textBox{
+        text-align: center;
+        padding: 10rem 1rem;
+    }
+}
+.cl_roboterBox{
+    display: block;
+    width: 50%;
+    height: max-content;
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+}

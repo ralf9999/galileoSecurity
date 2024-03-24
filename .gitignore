@@ -40,7 +40,16 @@ package-lock.json
 # DS Store 
 .DS_Store
 # html test
-/view-html-01
+view-html-01
+view-html-01/article.html
+view-html-01/footer.html
+view-html-01/impressum.html
+view-html-01/index.html
+view-html-01/loesung.html
+view-html-01/mietangebot.html
+view-html-01/slider.html
+view-html-01/styleemlemente.html
+view-html-01/ueberwachungstuerme.html
 # All plugins
 #
 # Note: If you wish to whitelist plugins,

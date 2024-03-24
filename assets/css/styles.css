@@ -256,6 +256,22 @@ button {
   font-size: 1.1rem;
 }
 
+.button {
+  display: block;
+  margin: 3rem 0 0 0;
+  font-size: 3.2rem;
+  line-height: 1;
+  background-color: #023d81;
+  color: #eeeeee;
+  padding: 2rem 3.4rem;
+  border-style: none;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
 /*##############Ende#################*/
 /*-------------- Deko Dreieck ------
 ######################################*/
@@ -365,6 +381,11 @@ button {
   -o-border-radius: 10px;
 }
 
+#kontakt {
+  display: block;
+  margin: 4rem 0 0 0;
+}
+
 /*----------- Media Queries ---------
 #######################################*/
 @media screen and (max-width: 991px) {
@@ -372,19 +393,23 @@ button {
     position: relative;
     width: 100%;
   }
+  .cl_wrapperMarginUpDown350 {
+    display: block;
+    margin: 16rem auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cl_wrapperMarginUpDown650-350 {
+    display: block;
+    margin: 25rem auto 10rem auto;
+  }
+  .cl_wrapperMarginUpDown350 {
+    display: block;
+    margin: 10rem auto;
+  }
 }
 /*------Header-----------
 ###############################*/
-.cl_headerBGimageHome {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 106vh;
-  overflow: hidden;
-  display: table-caption;
-}
-
 .cl_mobilNone {
   display: none;
 }
@@ -646,26 +671,23 @@ text-transform:lowercase .cl_areaNavBox .cl_navBox li a:hover {
 
 /*----------- media Query -----------
 ######################################*/
-@media screen and (max-width: 526px) {
-  .cl_header-content_hp {
-    width: 100%;
-    padding: 3rem 1rem;
+@media screen and (max-width: 1200px) {
+  .cl_areaNavBox {
+    display: none;
   }
-  .cl_header-content_hp h1 {
-    line-height: 4.2rem;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-  }
-}
-@media screen and (max-width: 666px) {
-  .cl_headline {
-    text-align: center;
-    padding: 0 1rem;
+  .cl_mobilNone,
+  .hp_burger_button_cl {
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    top: 1.5rem;
+    display: none;
   }
 }
 @media screen and (max-width: 833px) {
+  .cl_headerWrapper {
+    height: 50rem;
+  }
   .cl_header-content_hp {
     width: 100%;
     padding: 3rem 1rem;
@@ -679,40 +701,36 @@ text-transform:lowercase .cl_areaNavBox .cl_navBox li a:hover {
     margin: 0 0 0.6rem 0;
   }
 }
-@media screen and (max-width: 1200px) {
-  .cl_areaNavBox {
-    display: none;
+@media screen and (max-width: 666px) {
+  .cl_headerWrapper {
+    height: 42rem;
   }
-  .cl_mobilNone, .hp_burger_button_cl {
-    position: fixed;
-    z-index: 9999;
-    right: 0;
-    top: 1.5rem;
-    display: none;
+  .cl_headline {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 526px) {
+  .cl_headerWrapper {
+    height: 25rem;
+  }
+  .cl_header-content_hp {
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+  .cl_header-content_hp h1 {
+    line-height: 4.2rem;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
   }
 }
 /* Kontaktbox links Fixed*/
-.cl_contactFixBox_hp {
-  position: fixed;
-  top: 71.8rem;
-  right: 0;
-  z-index: 99;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  height: max-content;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  overflow: hidden;
-}
-
 .cl_mailContact_hp {
   position: fixed;
   top: 66rem;
-  z-index: 999;
+  z-index: 9999;
   width: 24rem;
   right: -18rem;
   transition: all 500ms ease-in-out;
@@ -735,7 +753,7 @@ text-transform:lowercase .cl_areaNavBox .cl_navBox li a:hover {
 
 .cl_phoneContact_hp {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   width: 24rem;
   top: 72.4rem;
   right: -18rem;
@@ -832,49 +850,53 @@ text-transform:lowercase .cl_areaNavBox .cl_navBox li a:hover {
   align-items: center;
 }
 
+.wa__stt_online {
+  transition: all 500ms ease-in-out;
+  position: fixed !important;
+  will-change: transform;
+  top: 780px;
+  right: -237px;
+  cursor: pointer;
+}
+
+.wa__stt_online:hover {
+  transition: all 500ms ease-in-out !important;
+  transform: translatex(-200px) !important;
+}
+
+/*-------Media query----------
+##############################*/
 @media screen and (max-width: 768px) {
-  /* Kontaktbox links Fixed*/
-  .cl_contactFixBox_hp {
-    position: fixed;
-    bottom: -3.6rem;
-    right: 0;
-    z-index: 99;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    top: unset;
+  .cl_mailContact_hp {
+    top: 42rem;
   }
   .cl_phoneContact_hp {
-    display: block;
-    margin: 0;
+    top: 48rem;
   }
-  .cl_mailContact_hp,
+  .wa__stt_online {
+    top: 53.5rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  .cl_mailContact_hp {
+    top: 37rem;
+  }
   .cl_phoneContact_hp {
-    background-color: #fff;
-    border: 0.2rem solid #0452ac;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    width: 50%;
-    padding: 1rem 1rem;
-    height: 7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 43rem;
   }
-  .cl_mailContact_hp img,
-  .cl_phoneContact_hp img {
-    height: 4rem;
+  .wa__stt_online {
+    top: 48.5rem;
   }
-  .cl_phoneActive_hp {
-    padding: 2rem 2rem 1rem 2rem;
+}
+@media screen and (max-width: 440px) {
+  .cl_mailContact_hp {
+    top: 30rem;
   }
-  .cl_phoneActive_hp a {
-    font-size: 2.5rem;
+  .cl_phoneContact_hp {
+    top: 35.5rem;
   }
-  .cl_active_hp {
-    font-size: 2.4rem;
+  .wa__stt_online {
+    top: 41rem;
   }
 }
 /*Burger Button--------
@@ -1019,20 +1041,11 @@ div.cl_hp_burger_button {
   overflow: hidden;
   position: absolute;
   top: 24rem;
-  z-index: 999;
+  z-index: 20;
 }
 .cl_imgBox_hp img {
   object-fit: cover;
-}
-
-.cl_imgBox02_hp {
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  margin: 0rem 0 0 0;
-}
-.cl_imgBox02_hp img {
-  object-fit: cover;
+  object-position: center;
 }
 
 /*--------- Content Place -----------
@@ -1050,21 +1063,13 @@ div.cl_hp_burger_button {
 
 /*--------- Media Queries -----------
 ###################################*/
-@media screen and (max-width: 800px) {
-  .cl_contentGridbox_hp {
-    display: grid;
-    width: 100%;
-    margin: 0 auto;
-    grid-template-columns: 100%;
-    grid-template-rows: max-content max-content max-content;
-    grid-template-areas: "images01" "contentWach" "images02";
-  }
+@media screen and (max-width: 768px) {
   /*--------- Images Place -----------
   ###################################*/
   .cl_img01_hp {
-    width: 100%;
+    width: 40%;
     max-width: 40rem;
-    height: fit-content;
+    height: 40rem;
     object-fit: contain;
   }
   .imgPlace01 {
@@ -1075,20 +1080,30 @@ div.cl_hp_burger_button {
     justify-content: center;
     margin: 0 0 0 0;
   }
-  .cl_imgBox02_hp {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
   /*--------- Content Place -----------
   ###################################*/
   .cl_content_img_hp {
     display: block;
     margin: 3rem auto;
     text-align: center;
+    width: 100%;
   }
   .cl_underline-left_hp {
     margin: 0 auto 1.2rem auto;
+  }
+}
+@media screen and (max-width: 489px) {
+  .cl_img_ueberwachung-wrapper_hp {
+    margin-bottom: 26rem;
+  }
+  .cl_imgBox_hp {
+    flex-direction: column;
+    margin: 0 0 0 0;
+  }
+  .cl_img01_hp {
+    width: 100%;
+    height: 38rem;
+    object-fit: contain;
   }
 }
 .cl_serviceWrapper_hp {
@@ -1178,6 +1193,21 @@ div.cl_hp_burger_button {
   -o-border-radius: 1rem;
 }
 
+@media screen and (max-width: 800px) {
+  .cl_mietproduktBox_hp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cl_produktsContent_hp {
+    text-align: center;
+    width: 100%;
+    padding: 0 1.2rem;
+  }
+  .cl_produktsContent_hp button {
+    margin: 3rem auto 0 auto;
+  }
+}
 .cl_mietangebotWrapper {
   display: flex;
   flex-direction: column;
@@ -1204,6 +1234,7 @@ div.cl_hp_burger_button {
 
 .cl_mietangebotContent {
   margin: 2rem auto;
+  padding: 1.2rem;
 }
 .cl_mietangebotContent h2 {
   display: inline-block;
@@ -1284,7 +1315,7 @@ div.cl_hp_burger_button {
   flex-wrap: wrap;
   gap: 8rem;
   justify-content: center;
-  margin: 8rem auto;
+  padding: 8rem;
 }
 
 .cl_serviceBoxContent_hp {
@@ -1324,8 +1355,16 @@ div.cl_hp_burger_button {
 
 .cl_serviceListe_hp {
   height: fit-content;
+  padding: 0 0 0 0;
+}
+
+.cl_serviceContentSub_hp {
+  padding: 0 0 8rem 0;
+}
+
+.cl_ServiceBackground {
+  width: 100%;
   background-color: rgba(216, 234, 255, 0.3098039216);
-  padding: 10rem 0 0 0;
 }
 
 /*------- DreieckLinksneu ----------
@@ -1451,6 +1490,9 @@ div.cl_hp_burger_button {
 }
 
 @media (max-width: 76.8rem) {
+  .cl_video_wrapper_hp {
+    margin: 0 auto;
+  }
   .cl_videogridbox_hp {
     width: 100%;
     margin: 0 auto;
@@ -1495,6 +1537,129 @@ div.cl_hp_burger_button {
     margin: 0 auto;
   }
 }
+.cl_404Area {
+  padding: 8rem 0 0 0;
+}
+.cl_404Area .textBox {
+  text-align: center;
+  padding: 10rem 1rem;
+}
+
+.cl_roboterBox {
+  display: block;
+  width: 50%;
+  height: max-content;
+}
+.cl_roboterBox img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.cl_flexboxUwk {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cl_uwkInfo-01 {
+  width: 49.1%;
+  padding: 1rem;
+}
+.cl_uwkInfo-01 hr {
+  display: block;
+  margin: 0 0 4rem 0;
+}
+.cl_uwkInfo-01 p {
+  padding: 0 0 3rem 0;
+}
+
+.cl_uwkImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49.1%;
+}
+
+.cl_technuwkWrapper {
+  width: 100%;
+}
+
+.cl_flexboxUwk-02 {
+  background-color: rgba(216, 234, 255, 0.3098039216);
+}
+
+.cl_technoBox {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-self: center;
+  gap: 5rem;
+  padding: 8rem 1rem;
+}
+
+.cl_technoImg, .cl_technoData {
+  width: 48%;
+}
+
+.cl_technoData hr {
+  display: block;
+  margin: 0 0 4rem 0;
+}
+
+.cl_data {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.cl_data p {
+  width: 48%;
+  padding: 0 0 3rem 0;
+}
+
+.cl_funktionUwkWrapper {
+  width: 100%;
+}
+
+.cl_funktionUwk {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.cl_funktionUwk .cl_funktionUwkImg, .cl_funktionUwk .cl_funktionUwkContent {
+  width: 49.1%;
+  height: max-content;
+}
+
+.cl_funktionUwkImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cl_funktionUwkContent hr {
+  display: block;
+  margin: 0 0 4rem 0;
+}
+.cl_funktionUwkContent p {
+  padding: 0 0 3rem 0;
+}
+
+#mietanfrage hr {
+  display: block;
+  margin: 0 0 4rem 0;
+}
+
 /*------footer SubWrapper--------------*/
 .cl_footerDown_hp {
   display: flex;
@@ -1617,11 +1782,6 @@ div.cl_hp_burger_button {
   }
   .cl_footerSecondBox li {
     width: fit-content;
-  }
-}
-@media screen and (max-width: 767px) {
-  .cl_footerDown_hp {
-    margin: 0 0 7rem 0;
   }
 }
 @media screen and (max-width: 658px) {

@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     gap: 8rem;
     justify-content: center;
-    margin: 8rem auto;
+    padding: 8rem;
 }
 .cl_serviceBoxContent_hp{
     width: 28rem;
@@ -43,8 +43,14 @@ margin: 0 auto 20rem;
 }
 .cl_serviceListe_hp{
   height: fit-content;
-  background-color: clr.$clr_backgrundlightColor;
-  padding: 10rem 0 0 0;
+  padding: 0 0 0 0;
+}
+.cl_serviceContentSub_hp{
+    padding:0 0 8rem 0;
+}
+.cl_ServiceBackground{
+width: 100%;
+background-color: clr.$clr_backgrundlightColor;
 }
 /*------- DreieckLinksneu ----------
 ####################################*/

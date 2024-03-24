@@ -2,15 +2,6 @@
 @use 'color' as clr;
 /*------Header-----------
 ###############################*/
-.cl_headerBGimageHome {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 106vh;
-  overflow: hidden;
-  display: table-caption
-}
 
 .cl_mobilNone {
   display: none;
@@ -267,52 +258,64 @@ background-color: clr.$clr_headerBarColor;
 }
 /*----------- media Query -----------
 ######################################*/
-@media screen and (max-width:526px) {
+@media screen and (max-width:1200px) {
+  .cl_areaNavBox {
+    display: none;
+  }
+
+  .cl_mobilNone,
+  .hp_burger_button_cl {
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    top: 1.5rem;
+    display: none;
+  }
+
+}
+
+@media screen and (max-width:833px) {
+  .cl_headerWrapper {
+    height: 50rem;
+  }
   .cl_header-content_hp{
     width: 100%;
     padding: 3rem 1rem;
     h1 {
-      line-height: fts.$fts_font_sizeH1_height480;
       hyphens: auto;
       -webkit-hyphens: auto;
       -moz-hyphens: auto;
       -ms-hyphens: auto;
+      display: block;
+        margin: 0 0 0.6rem 0;
 }
   }
   
 }
 @media screen and (max-width:666px) {
+  .cl_headerWrapper {
+      height: 42rem;
+    }
   .cl_headline{
     text-align: center;
     padding: 0 1rem;
   }
   
 }
-@media screen and (max-width:833px) {
+@media screen and (max-width:526px) {
+  .cl_headerWrapper {
+    height: 25rem;
+  }
   .cl_header-content_hp{
     width: 100%;
     padding: 3rem 1rem;
-    h1{
+    h1 {
+        line-height: fts.$fts_font_sizeH1_height480;
       hyphens: auto;
       -webkit-hyphens: auto;
       -moz-hyphens: auto;
       -ms-hyphens: auto;
-      display: block;
-      margin: 0 0 0.6rem 0;
 }
-  }
-  
-}
-@media screen and (max-width:1200px) {
-  .cl_areaNavBox{
-    display: none;
-  }
-  .cl_mobilNone, .hp_burger_button_cl{
-    position: fixed;
-    z-index: 9999;
-    right: 0;
-    top: 1.5rem;
-    display: none;
   }
   
 }

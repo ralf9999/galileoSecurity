@@ -7,11 +7,11 @@
 */
 ?>
 <?php $url = home_url()?>
-<?php get_header(); ?>
+<?php get_header('home'); ?>
 <main class="">
 	<div class="cl_404Box">
-		<div class="cl_404Area">
-			<div class="cl_roboterBox">
+		<div class="cl_404Area cl_boxingArea cl_wrapperMarginUpDown-0">
+			<div class="cl_roboterBox cl_wrapperMarginUpDown-0">
 				<img src="<?= home_url('wp-content/themes/galileoSecurity/assets/img/roboter.svg') ?>" alt="Roboter">
 			</div>
 			<div class="textBox">

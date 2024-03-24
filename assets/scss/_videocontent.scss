@@ -87,6 +87,9 @@ display: flex;
         object-position: center center;
 }
 @media (max-width:76.8rem) {
+    .cl_video_wrapper_hp{
+        margin: 0 auto;
+        }
     .cl_videogridbox_hp{
         width: 100%;
         margin: 0 auto;

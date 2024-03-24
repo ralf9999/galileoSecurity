@@ -220,6 +220,22 @@ button {
   font-size: 1.1rem;
 }
 
+.button {
+  display: block;
+  margin: 3rem 0 0 0;
+  font-size: 3.2rem;
+  line-height: 1;
+  background-color: #023d81;
+  color: #eeeeee;
+  padding: 2rem 3.4rem;
+  border-style: none;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
 /*##############Ende#################*/
 /*-------------- Deko Dreieck ------
 ######################################*/
@@ -329,12 +345,31 @@ button {
   -o-border-radius: 10px;
 }
 
+#kontakt {
+  display: block;
+  margin: 4rem 0 0 0;
+}
+
 /*----------- Media Queries ---------
 #######################################*/
 @media screen and (max-width: 991px) {
   .cl_boxingArea {
     position: relative;
     width: 100%;
+  }
+  .cl_wrapperMarginUpDown350 {
+    display: block;
+    margin: 16rem auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cl_wrapperMarginUpDown650-350 {
+    display: block;
+    margin: 25rem auto 10rem auto;
+  }
+  .cl_wrapperMarginUpDown350 {
+    display: block;
+    margin: 10rem auto;
   }
 }
 @font-face {
