@@ -7,17 +7,17 @@ div.cl_hp_burger_button {
     overflow: hidden;
     height: 65px;
     width: 65px;
-    background-color: clr.$clr_primaryColorblue;
-    box-shadow: clr.$clr_shadow-box;
     border-radius: 1rem;
     position: fixed;
-    top: 0;
+    top: 2.2rem;
     right: 1.4rem;
     z-index: 99999;
     color: transparent;
     cursor: pointer;
-    margin: 1rem 0 0 0 ;
+    margin: 0 0 0 0 ;
+    display: none;
   }
+
 .cl_hp_burger_button .cl_svgBurger {
     color: transparent;
     stroke:#ffffff;
@@ -46,6 +46,7 @@ div.cl_hp_burger_button {
     translate: 1px -1px;
   }
   .cl_btn-none{
+    display: block;
   opacity: 1;
   }
   .cl_btn-active{
@@ -53,3 +54,10 @@ div.cl_hp_burger_button {
     opacity: 1;
 }
   /*############Ende###################*/
+
+  //##########-media query-############
+  @media screen and (max-width:81rem) {
+    div.cl_hp_burger_button{
+        display: block;
+    }
+  }

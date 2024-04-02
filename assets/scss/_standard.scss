@@ -1,5 +1,13 @@
 @use 'fonts' as fts;
 @use 'color' as clr;
+
+/*#####------Standards Styles-----########*/
+$height-sizeHeaderNormal-Logo:7rem;
+$headersize-paddingNormal:1rem;
+$height-sizeHeaderNormal:$height-sizeHeaderNormal-Logo;
+$height-sizeHeader667-Logo:4rem;
+$headersize-padding667:0.5rem;
+$height-sizeHeader667:calc($height-sizeHeader667-Logo + ($headersize-padding667 ));
 html{
     font-size: 10px;
     scroll-behavior: smooth;
@@ -112,19 +120,19 @@ button {
 }
 //###### Button style ############//
 .button {
-    display: block;
-    margin: 3rem 0 0 0;
-    font-size: 3.2rem;
-    line-height: 1;
-    background-color: clr.$clr_backgrundDarkColorblue;
-    color: clr.$clr_textColorDark;
-    padding: 2rem 3.4rem;
-    border-style: none;
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
+        display: block;
+        margin: 3rem 0 0 0;
+        font-size: fts.$fts_font_size_h2;
+        line-height: 1;
+        background-color: clr.$clr_backgrundDarkColorblue;
+        color: clr.$clr_textColorDark;
+        padding: 2rem 3.4rem;
+        border-style: none;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
 }
 /*##############Ende#################*/
 /*-------------- Deko Dreieck ------
@@ -231,7 +239,7 @@ border-radius: 10px;
 }
 /*----------- Media Queries ---------
 #######################################*/
-@media screen and (max-width:991px) {
+@media screen and (max-width:1180px) {
     .cl_boxingArea {
         position: relative;
         width: 100%;

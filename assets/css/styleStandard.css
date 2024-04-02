@@ -32,7 +32,7 @@ h1 {
 
 h2 {
   font-family: "Comfortaa", "sans-serif";
-  font-size: 3.2rem;
+  font-size: clamp(2.4rem, -1rem + 4.2vw, 3.2rem);
   font-weight: 300;
   line-height: 4rem;
 }
@@ -60,9 +60,9 @@ h5 {
 
 h6, p, li, a, span, button, input, label {
   font-family: "Comfortaa", "sans-serif";
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, -2rem + 4.2vw, 2.2rem);
   font-weight: 300;
-  line-height: 2.6rem;
+  line-height: clamp(2rem, -2rem + 6vw, 2.6rem);
 }
 
 p {
@@ -96,6 +96,19 @@ a {
   cursor: pointer;
 }
 
+ul {
+  padding-inline-start: 0;
+}
+
+@media screen and (max-width: 991px) {
+  h6, p, li, a, span, button, input, label {
+    font-family: "Comfortaa", "sans-serif";
+    font-size: clamp(1.8rem, -2rem + 4.2vw, 2.2rem);
+    font-weight: 300;
+    line-height: 2.6rem;
+  }
+}
+/*#####------Standards Styles-----########*/
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -223,9 +236,9 @@ button {
 .button {
   display: block;
   margin: 3rem 0 0 0;
-  font-size: 3.2rem;
+  font-size: clamp(2.4rem, -1rem + 4.2vw, 3.2rem);
   line-height: 1;
-  background-color: #023d81;
+  background-color: hsl(212, 97%, 26%);
   color: #eeeeee;
   padding: 2rem 3.4rem;
   border-style: none;
@@ -352,7 +365,7 @@ button {
 
 /*----------- Media Queries ---------
 #######################################*/
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1180px) {
   .cl_boxingArea {
     position: relative;
     width: 100%;
@@ -517,7 +530,7 @@ span {
 .cl_hoverSecondColor {
   width: 25rem;
   height: 25rem;
-  background-color: #b3b3b3;
+  background-color: #cdffce;
 }
 
 .cl_primaryColor,
@@ -589,7 +602,7 @@ button:focus {
 }
 .cl_btnBox .cl_btnZwei {
   transition: all 300ms ease-in-out;
-  background-color: #b3b3b3;
+  background-color: #cdffce;
   color: #fff;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;

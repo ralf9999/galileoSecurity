@@ -1,0 +1,56 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+//#####---Who Place-----#######/
+.cl_whoplaceWrapper{
+    width: 100%;
+    .cl_whoplaceTitle {
+        text-align: center;
+    }
+}
+.cl_whoplaceBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+    .cl_whoplaceContent {
+        transition: all 500ms ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 28rem;
+        height: 20rem;
+        padding: 1rem;
+        border: 2px solid clr.$clr_backgrundlightColor;
+        background-color: clr.$clr_backgrundPrimayColor;
+        color: clr.$clr_textColorDark;
+        border-radius: 1rem;
+        overflow: hidden;
+        hyphens: auto;
+        h2{
+            text-align: center;
+            hyphens: auto;
+        }
+        p{
+            opacity: 0;
+        }
+        &:hover{
+            transition: all 500ms ease-in-out;
+            position: relative;
+            z-index: 10;
+            border: 2px solid clr.$clr_backgrundPrimayColor;
+            background-color:clr.$clr_primaryColorlightblue;
+            color: clr.$clr_primaryColor;
+            transform: scale(1.05);
+            box-shadow: clr.$clr_shadow-box;
+            p{
+                opacity: 1;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,273 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+//###### Überwachungstürme
+
+.cl_titleSide{
+    padding: 1rem;
+}
+.cl_uwkInfo-01{
+    width: 100%;
+    padding: 1rem;
+    hr{
+        display: block;
+        margin: 0 0 4rem 0;
+    }
+
+    p{
+        padding: 0 0 3rem 0;
+    }
+}
+.cl_uwkImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+//#####---GridBox uwk----#######
+.cl_uwkGridbox01 {  
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: min-content max-content max-content;
+    gap: 10px 10px;
+    padding: 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contenttitle image01"
+      "descript image01"
+      "button01 image01";
+  }
+  
+  .cl_uwkTitle01 { grid-area: contenttitle; }
+  
+  .cl_uwkInfo-01 { grid-area: descript; }
+  
+  .button { grid-area: button01; }
+
+  .cl_uwkImg { grid-area: image01; }
+  .Image{
+    width: fit-content;
+    img{
+        width: 100%;
+    }
+  }
+//####----Techno Data----####
+.cl_technuwkWrapper{
+    width: 100%;
+}
+.cl_flexboxUwk-02{
+    background-color: clr.$clr_backgrundlightColor;
+}
+.cl_technoBox {  
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: min-content max-content;
+    gap: 10px 10px;
+    padding: 8rem 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image02 contenttitle02"
+      "image02 descript02";
+  }
+  .cl_technoImg{grid-area: image02;}
+  .cl_technoData{grid-area: descript02;}
+  .cl_uwkTitleData { grid-area: contenttitle02; }
+.cl_technoImg, .cl_technoData{
+    width: 100%;
+}
+.cl_technoImg{
+    display: flex;
+    align-items: center;
+    img{
+        height: 55rem;
+    }
+}
+.cl_uwkTitleData{
+    hr{
+        display: block;
+        margin: 0 0 4rem 0;
+    }
+}
+.cl_data{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    p{
+        width: 48%;
+        padding: 0 0 3rem 0;
+    }
+}
+//####---Funktion von Überwachungskamera########
+.cl_funktionUwkWrapper{
+    width: 100%;
+
+}
+.cl_funktionUwk{
+    width: 70%;
+    margin:0 auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: min-content max-content;
+    gap: 20px 20px;
+    padding: 8rem 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image03 contenttitle03"
+      "image03 descript03";
+    .cl_funktionUwkImg{
+        width:100%;
+        height: max-content;
+        h2{
+            width: 100%;
+        }
+    }
+    .cl_funktionUwkContent{
+        width:100%;
+        height: max-content;
+        p{
+            width: 100%;
+        }
+    }
+
+}
+.cl_funktionUwkTitle{ grid-area: contenttitle03;}
+.cl_funktionUwkImg{grid-area: image03;}
+.cl_funktionUwkContent{grid-area: descript03;}
+.cl_funktionUwkImg{
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+.cl_funktionUwkContent{
+    hr{
+        display: block;
+        margin: 0 0 4rem 0;
+    }
+
+    p{
+        padding: 0 0 3rem 0;
+    }
+}
+#mietanfrage{
+    hr{
+        display: block;
+        margin: 0 0 4rem 0;
+    }
+}
+//###-----Media Query 1180px
+@media screen and (max-width:1180px) {
+    .cl_technoBox { 
+        width: 100%;
+    }
+    .cl_funktionUwk{
+        width: 100%;
+    }
+}
+//####----Media Query 767px
+@media screen and (max-width:767px) {
+    .cl_uwkGridbox01 { 
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content max-content max-content max-content;
+        padding: 1rem;
+        gap: 2rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "contenttitle"
+          "image01"
+          "descript"
+          "button01";
+      }
+      .cl_uwkTitle01 { text-align: center;hr{width: 60%;} }
+  
+      .cl_uwkInfo-01 { text-align: center; }
+      .cl_funktionUwk{
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content max-content max-content;
+        gap: 20px 20px;
+        padding: 8rem 2rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "contenttitle03"
+          "image03"
+          "descript03";
+    }
+    .cl_funktionUwkTitle{
+        text-align: center;
+        hr{
+            width: 60%;
+        }
+    }
+    .cl_funktionUwkContent{
+        text-align: center;
+    }
+}
+#mietanfrage{
+    h2{
+        text-align: center;
+    }
+    hr{
+        width: 60%;
+        margin: 0 auto 6rem auto;
+    }
+}
+.cl_formBox{
+    padding: 0 2rem;
+}
+//####----Media Query 667px
+@media screen and (max-width:667px) {
+    .cl_technoBox {  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% max-content max-content;
+        gap: 10px 10px;
+        padding: 8rem 2rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "contenttitle02"
+          "image02"
+          "descript02";
+      }
+      .cl_technoImg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 55rem;
+        }
+    }
+    .cl_uwkTitleData { text-align: center;hr{width: 60%;margin: 0 auto;} }
+
+}
+//####----Media Query 530px
+@media screen and (max-width:530px) {
+.cl_data{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    p{
+        width: 100%;
+        padding: 2rem 0 0 0;
+        &:last-child{
+            padding: 0;
+            border-bottom:1px solid black;
+            font-size: calc(fts.$fts_font_size_p - 0.4rem);
+        }
+
+    }
+
+}
+.cl_technoData {
+    margin: 4rem auto 10rem auto;
+}
+} 

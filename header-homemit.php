@@ -26,57 +26,36 @@ $attachment_id = 56;
         </div>
         <div class="cl_phoneContact_hp">
             <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/phone-plus.svg" alt=""><p>Telefon</p>
-        </div>   
+        </div> 
+        <div class="cl_whatsappButton"><?php echo do_shortcode('[njwa_button id="171"]');?></div> 
     <!--#######################################-->
     <header class="cl_headerBox">
-        <!-- mobile -->
-        <div id="id_menuarea_mobil_hp" class="cl_menuarea_mobil_hp cl_menuarea_mobil_slid_hp cl_mobilNone">
-            <div class="cl_logoTex cl_mobilLogo">
-            <a href="<?= $url ?>">
-                <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/base_logo_transparent_background-white.svg"
-                    alt="Galileo Security">
-            </a>
+    <div class="cl_menuBox">
+            <div class="cl_logoArea">
+                <a href="<?= $url ?>">
+                    <img src="<?= $url ?>/wp-content/uploads/2024/03/base_logo_transparent_background-white.svg" alt="Galileo Security Technology">
+                </a>
             </div>
-            <div class="cl_areaNavBoxMobil">
-                <?php wp_nav_menu(
-                    array(
-                        'menu' => 'Hauptmenu',
-                        'menu_class' => 'cl_navBoxMobil',
-                        'menu_id' => 'id_hauptmenu',
-                        'container' => 'li',
-                        'depth' => '2',
-                    )); ?>
-            </div>
-        </div>
-        <div id="id_burger" class="cl_hp_burger_button cl_btn-none" aria-controls="primary-navigation"
-            aria-expanded="false">
-            <svg class="cl_svgBurger" viewBox="-10 -10 120 120" width="65">
-                <path class="line" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"
-                    d="m 5 30 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
-                </path>
-            </svg>
-        </div>
-        <!-- desktop -->
-        <div class="cl_logoText">
-        <a href="<?= $url ?>">
-            <img src="<?= $url ?>/wp-content/themes/galileoSecurity/assets/img/base_logo_transparent_background-white.svg"
-                alt="Galileo Security Technology">
-        </a>
-        </div>
-        <div id="id_menuareaSecond_hp" class="cl_menuareaSecondHome_hp">
-            <div class="cl_areaNavBox">
-                <?php wp_nav_menu(
-                    array(
-                        'menu' => 'Hauptmenu',
-                        'menu_class' => 'cl_navBox',
-                        'menu_id' => 'id_hauptmenu',
-                        'container' => 'ul',
-                        'depth' => '2',
-                    )); ?>
+            <div class="cl_bluebackground"></div>
+            <nav class="cl_navArea cl_mobileNavClose">
+                <?php wp_nav_menu( array(
+                                'menu' => 'Hauptmenu',
+                                'menu_class' => 'cl_menu',
+                                'menu_id' => 'id_hauptmenu',
+                                'container' => 'ul',
+                                'depth' => '2',
+                        ) ); ?>
 
+            </nav>
+            <div class="cl_mobilArea">
+                <div class="cl_burgerBox">
+                    <span class=" cl_burgerLine cl_lineUp"></span>
+                    <span class=" cl_burgerLine cl_lineMiddle"></span>
+                    <span class=" cl_burgerLine cl_lineDown"></span>
+                </div>
             </div>
         </div>
-        <div class="cl_whatsappButton"><?php echo do_shortcode('[njwa_button id="171"]');?></div>
+    </div>
     </header>
     <div class="cl_headerWrapper">
         <div class="cl_headerSlider_hp"><?php echo do_shortcode('[smartslider3 slider="2"]');?>

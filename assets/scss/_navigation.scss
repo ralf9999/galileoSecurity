@@ -1,0 +1,287 @@
+@use 'fonts' as fts;
+@use 'color' as clr;
+@use 'standard' as std;
+// Theme Navigation Destop 
+.cl_menuWrapper{
+    position: relative;
+    background-color: clr.$clr_backgrundDarkColorblue;
+    width: 800px;
+    overflow: hidden;
+}
+.cl_menuBox{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 99;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: clr.$clr_backgrundDarkColorblue;
+    .cl_logoArea{
+        position: relative;
+        z-index:999;
+        width: 20%;
+        img{
+        height: std.$height-sizeHeaderNormal-Logo;
+        }
+    } 
+}
+.cl_navArea{
+    color: clr.$clr_textColorDark;
+    width: 60%;
+    background-color: clr.$clr_backgrundDarkColorblueNav;
+    .cl_menu{
+        position: relative;
+        z-index: 99;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        Li{
+            a{
+                font-size: 1.6rem;
+            }
+        }
+        .cl_submenuBox{
+            position: relative;
+            z-index: 99;
+            height: fit-content;
+        }
+        
+    }
+}
+.cl_links{
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    &:hover{
+        transition: all 500ms ease-in-out;
+        color: clr.$clr_hoverSecondColor;
+        transform: translateY(3px);
+    }
+}
+.sub-menu{
+    list-style: none;
+    color: clr.$clr_textColorDark;
+    transition: all 300ms ease-in-out;
+    background-color: clr.$clr_backgrundDarkColorblue;
+    width: 140%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0rem;
+    position: absolute;
+    list-style: none;
+    overflow: hidden;
+    height: 0px;
+    Li{
+        font-size: 1.6rem;
+    }
+
+}
+.cl_subLinks{
+    color: clr.$clr_textColorDark;
+    &:hover{
+        transition: all 500ms ease-in-out;
+        color: clr.$clr_hoverSecondColor;
+        transform: translateY(3px);
+    }
+}
+.cl_submenuActive{
+    transition: all 300ms ease-in-out;
+    padding: 1rem;
+    background-color: clr.$clr_backgrundDarkColorblue;
+    height: max-content;
+    text-align: center;
+    li {
+        a {
+            font-size: 1.6rem;
+        }
+    }
+}
+//mobile Navigation
+.cl_mobilArea{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 15%;
+}
+.cl_textheight {
+    display: block;
+    color: clr.$clr_textColorDark;
+    background-color: clr.$clr_backgrundDarkColorblue;
+
+    .cl_texttest {
+        color: clr.$clr_textColorDark;
+        height: 0px;
+        cursor: pointer;
+        &:hover {
+            transition: all 1s ease-in-out;
+            height: 300px;
+        }
+    }
+}
+  //#######--Burger--##############
+  .cl_burgerBox{
+    overflow: hidden;
+    width: 6.4rem;
+    height: 4.4rem;
+    position: relative;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .cl_lineUp, .cl_lineMiddle, .cl_lineDown{
+    transition: all 500ms ease-in-out;
+    transform: rotate(45deg);
+    background-color: clr.$clr_textColorDark;
+    height: 0.5rem;
+    width: 100%;
+  }
+//######## hover effekt #########
+.cl_linetogether{
+    transition: all 500ms ease-in;
+    transform: rotate(0);
+    justify-content: center;
+    align-items:center;
+}
+/*--- WordPress Menüstyles --------*/
+.menu-item{
+    a{
+        text-decoration: none;
+        color: clr.$clr_textColorDark;
+    }
+}
+//######### Media Query #############
+
+@media (max-width:991px) {
+
+    .cl_menuBox{
+    .cl_logoArea,
+    .cl_mobilArea {
+        width: 50%;
+    }
+    }
+
+    .cl_menu .cl_submenuActive li a{
+        font-size: 1.4rem;
+    }
+    .cl_navArea {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+    }
+    .cl_links{
+        text-align: center;
+        width: 100%;
+    }
+    .cl_bluebackground {
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: std.$height-sizeHeaderNormal;
+        background-color: clr.$clr_backgrundDarkColorblue;
+    }
+
+    .cl_burgerBox {
+        display: flex;
+        margin: 0 1rem 0 0;
+    }
+    .cl_navArea .cl_menu .cl_submenuBox{
+        width: 100%;
+        text-align: center;
+    }
+    .cl_mobileNavClose {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 98;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: clr.$clr_backgrundDarkColorblueNav;
+        transition: all 500ms ease-in-out;
+        transform: translateY(-130%);
+
+        .cl_menu {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 3rem;
+        }
+    }
+
+    .cl_mobileNavOpen {
+        transition: all 500ms ease-in-out;
+        transform: translateY(std.$height-sizeHeaderNormal);
+
+        .cl_menu {
+            flex-direction: column;
+            transition: all 300ms ease-in-out;
+            position: relative;
+            z-index: 10;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 3rem;
+            z-index: 99;
+            width: 100%;
+        }
+    }
+    .cl_submenuActive{
+        position: relative;
+        gap: 2rem;
+        padding: 1rem;
+        height: fit-content;
+        text-align: center;
+        width: 100%;
+        word-break:unset;
+    }
+    .sub-menu{
+        color: clr.$clr_textColorDark;
+        transition: all 300ms ease-in-out;
+        background-color: transparent;
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+}
+@media (max-width:667px) {
+    .cl_menuBox {
+    padding:std.$headersize-padding667;
+        .cl_logoArea {
+            img {
+                height: std.$height-sizeHeader667-Logo;
+            }
+        }
+    }
+    .cl_mobileNavOpen {
+        transition: all 500ms ease-in-out;
+        transform: translateY(std.$height-sizeHeader667);
+    }
+    .cl_bluebackground {
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        left: 2%;
+        width: 70%;
+        height: std.$height-sizeHeader667;
+    }
+    .cl_burgerBox{
+        overflow: hidden;
+        width: 3rem;
+        height: 2.1rem;
+    }
+    .cl_lineUp, .cl_lineMiddle, .cl_lineDown{
+        height: 0.252rem;
+    }
+}

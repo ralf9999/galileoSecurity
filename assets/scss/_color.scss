@@ -1,5 +1,6 @@
 $clr_primaryColor:#8E0404;
 $clr_primaryColorblue:#0452ac;
+$clr_primaryColorlightblue:#D8EAFF;
 $clr_secondColor:#b3b3b3;
 $clr_textColorlight:#666666;
 $clr_textColorDark:#eeeeee;
@@ -8,12 +9,13 @@ $clr_textcolorDarkHover:#bababa;
 $clr_backgrundPrimayColor:#0452ac;
 $clr_backgrundlightColor:#d8eaff4f;
 $clr_backgrundDarkColor:#7c0202;
-$clr_backgrundDarkColorblue:#023d81;
+$clr_backgrundDarkColorblue:hsl(212, 97%, 26%);
+$clr_backgrundDarkColorblueNav:hsla(212, 97%, 26%, 0.83);
 $clr_backgroundSecondColor:#fff;
 $clr_backgroundSwitchColor:#fafafa;
 $clr_backgroundSliderContent:rgba(0, 0, 0, 0.5);
 $clr_hoverPrimaryColor:#ee8637;
-$clr_hoverSecondColor:#b3b3b3;
+$clr_hoverSecondColor:#cdffce;
 $clr_headerBarColor:rgba($color: #000000, $alpha: 0.6);
 $clr_shadow-box:0px 4px 9.8px rgba(0, 0, 0, 0.072),
 0px 4px 14.5px rgba(0, 0, 0, 0.087),

@@ -20,7 +20,7 @@
     object-fit: cover;
   }
 }
-.cl_navBox {
+.cl_menu {
 li.cl_mietangebot_hp{
   background-color:clr.$clr_backgrundPrimayColor;
   padding: 0.6rem;
@@ -230,7 +230,9 @@ background-color: clr.$clr_headerBarColor;
   width: 100%;
   height: max-content;
   object-fit: cover;
-  object-position: center -20rem;
+  object-position: center;
+  height: 100%;
+  min-height: 100%;
 
 }
 /*------- header Content ---------
